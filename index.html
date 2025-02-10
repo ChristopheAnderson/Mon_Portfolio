@@ -1,0 +1,1474 @@
+<!doctype html>
+<html>
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css2.css" rel="stylesheet">
+  <link href="main.min.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="cdn.tailwindcss.js"></script>
+  <!--<script src="https://cdn.tailwindcss.com"></script>-->
+  <!--<script src="https://unpkg.com/@tailwindcss/browser@4"></script>-->
+ 
+</head>
+
+
+<body  class="transition-opacity duration-500" >
+
+
+
+
+
+  <header class=" z-[2] w-full h-[75px] fixed p-1 bg-blue-600 dark:bg-gray-800">
+    <div class="container flex justify-between items-center h-16 mx-auto">
+      <!-- Logo -->
+      <a rel="noopener noreferrer" href="" aria-label="Back to homepage" class="flex items-center p-2">
+        <img alt="Logo" src="téléchargement.png" class="object-cover rounded-full h-12 w-12 sm:h-16 sm:w-28" />
+      </a>
+      
+
+      <div class="relative">
+        <span class="absolute inset-y-0 left-0 flex items-center pl-2">
+          <button type="submit" title="Search" class="p-1 focus:outline-none focus:ring">
+            <svg fill="currentColor" viewBox="0 0 512 512" class="w-4 h-4 text-gray-800 dark:text-gray-200">
+              <path d="M479.6,399.716l-81.084-81.084-62.368-25.767A175.014,175.014,0,0,0,368,192c0-97.047-78.953-176-176-176S16,94.953,16,192,94.953,368,192,368a175.034,175.034,0,0,0,101.619-32.377l25.7,62.2L400.4,478.911a56,56,0,1,0,79.2-79.195ZM48,192c0-79.4,64.6-144,144-144s144,64.6,144,144S271.4,336,192,336,48,271.4,48,192ZM456.971,456.284a24.028,24.028,0,0,1-33.942,0l-76.572-76.572-23.894-57.835L380.4,345.771l76.573,76.572A24.028,24.028,0,0,1,456.971,456.284Z"></path>
+            </svg>
+          </button>
+        </span>
+        <input type="search" name="Search" placeholder="Search..." class="w-32 py-2 pl-10 text-sm rounded-md sm:w-auto focus:outline-none bg-white text-gray-800 focus:bg-gray-50 border-none" />
+      </div>
+
+      <!-- Navigation Links (Desktop) -->
+      <ul class="items-stretch hidden space-x-3 lg:flex">
+        
+        <li class="flex">
+          <a rel="noopener noreferrer" href="" class="flex items-center px-4 -mb-1 text-white hover:text-gray-200">Blog</a>
+        </li>
+        <li class="flex">
+          <a rel="noopener noreferrer" href="" class="flex items-center px-4 -mb-1 text-white hover:text-gray-200"> Contact</a>
+        </li>
+        <li class="flex">
+          <a rel="noopener noreferrer" href="" class="flex items-center px-4 -mb-1 text-white hover:text-gray-200">Assistance</a>
+        </li>
+
+        <li class="flex">
+          <a rel="noopener noreferrer" href="Sign_in.html" class="flex items-center px-4 py-[8px] -mb-1 text-white border-[1px] border-white rounded-md hover:bg-white hover:text-blue-800">Se connecter</a>
+        </li>
+
+      </ul>
+
+      
+  
+      <!-- Search and Login (Desktop) -->
+      <div class="flex items-center space-x-4">
+        <!-- Search Bar -->
+        
+  
+        <!-- Login Button -->
+        <!-- <button type="button" class=" relative lg:right-[25px] hidden px-6 py-2 font-semibold rounded lg:block bg-white text-blue-600 hover:bg-gray-100">
+            Log in
+        </button> -->
+
+
+        <div class="dropdown relative">
+          <label tabindex="0" class="normal-case ml-2 cursor-grabbing">
+              <img src="avatar\fun-3d-illustration-american-referee.jpg" class=" relative -top-[6px] w-12 h-12 rounded-full transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300" alt="" >
+          </label>
+          <!-- <div tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-300 rounded-box w-52 text-center">
+              <div class="flex flex-col items-center">
+                  <div class="avatar">
+                      <div class="w-24 h-24 rounded-full overflow-hidden">
+                          <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" class="w-full h-full object-cover" />
+                      </div>
+                  </div>
+                  <div class="mb-1">Name</div>
+                  <div class="badge badge-primary mb-1">Admin</div>
+              </div>
+              <div class="divider"></div>
+              <div class="block mb-1">
+                  <a href="" class="block">Панель управления</a>
+              </div>
+              <div class="block mb-1">
+                  <a class="block">Игровые аккаунты</a>
+              </div>
+              <div class="block">
+                  <a href="" method="post" class="block">Выход</a>
+              </div>
+          </div> -->
+  <!-- component -->
+  
+          <div tabindex="0" class="relative -left-[260px] dropdown-content z-[1] menu p-2 drop-shadow-sm bg-white text-blue-500 border-blue-600 border-2 border-solid rounded-lg w-72">      
+              <div class="p-3 divide-y divide-blue-400 divide-neutral">
+                  <div class="flex space-x-4 items-center p-4">
+                      <div class="flex mr-auto items-center space-x-4">
+                          <img src="avatar\jeune-homme-souriant-aux-lunettes_1308-174702.avif" alt="Name" class="w-16 h-16 shrink-0 rounded-full"/>
+                          <div class="space-y-2 flex flex-col flex-1 truncate">
+                              <div class="relative leading-tight">
+                              <span class="flex">
+                                  <span class="truncate relative pr-8">Name</span>
+                              </span>
+                              </div>
+                              <p class="font-normal leading-tight truncate">example@mail.com</p>
+                          </div>
+                      </div>
+                  </div>
+                  <div aria-label="navigation" class="py-2">
+                      <nav class="grid gap-1">
+                          <a href="/" class="flex items-center leading-6 space-x-3 py-3 px-4 w-full text-md focus:outline-none hover:bg-gray-100 rounded-md">
+                              <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+                                  <path d="M3 5C3 3.89543 3.89543 3 5 3H9C10.1046 3 11 3.89543 11 5V9C11 10.1046 10.1046 11 9 11H5C3.89543 11 3 10.1046 3 9V5ZM9 5H5V9H9V5Z"/><path d="M3 15C3 13.8954 3.89543 13 5 13H9C10.1046 13 11 13.8954 11 15V19C11 20.1046 10.1046 21 9 21H5C3.89543 21 3 20.1046 3 19V15ZM9 15H5V19H9V15Z"/><path d="M13 5C13 3.89543 13.8954 3 15 3H19C20.1046 3 21 3.89543 21 5V9C21 10.1046 20.1046 11 19 11H15C13.8954 11 13 10.1046 13 9V5ZM19 5H15V9H19V5Z"/><path d="M13 15C13 13.8954 13.8954 13 15 13H19C20.1046 13 21 13.8954 21 15V19C21 20.1046 20.1046 21 19 21H15C13.8954 21 13 20.1046 13 19V15ZM19 15H15V19H19V15Z"/>
+                              </svg>
+                              <span>Publier</span>
+                          </a>
+                          <a href="/" class="flex items-center leading-6 space-x-3 py-3 px-4 w-full text-md focus:outline-none hover:bg-gray-100 rounded-md">
+                              <svg class="w-7 h-7" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none">
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                  <path d="M10.325 4.317c.426 -1.756 2.924 -1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543 -.94 3.31 .826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756 .426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543 -.826 3.31 -2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756 -2.924 1.756 -3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543 .94 -3.31 -.826 -2.37 -2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756 -.426 -1.756 -2.924 0 -3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94 -1.543 .826 -3.31 2.37 -2.37c1 .608 2.296 .07 2.572 -1.065z"></path>
+                                  <path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"></path>
+                              </svg>
+                              <span>Paramètres</span>
+                          </a>
+                          <a href="/" class="flex items-center leading-6 space-x-3 py-3 px-4 w-full text-md  focus:outline-none hover:bg-gray-100 rounded-md">
+                              <svg class="w-7 h-7" viewBox="0 0 35 35" fill="currentColor">
+                                  <path d="M13.2,18.456H8.475a1.25,1.25,0,1,1,0-2.5H13.2a1.25,1.25,0,0,1,0,2.5Z"/>
+                                  <path d="M10.839,20.82a1.25,1.25,0,0,1-1.25-1.25V14.841a1.25,1.25,0,0,1,2.5,0V19.57A1.25,1.25,0,0,1,10.839,20.82Z"/>
+                                  <path d="M20.954,18.515a1.251,1.251,0,0,0,0-2.5,1.251,1.251,0,0,0,0,2.5Z"/>
+                                  <path d="M23.8,15.67a1.251,1.251,0,0,0,0-2.5,1.251,1.251,0,0,0,0,2.5Z"/>
+                                  <path d="M23.68,21.241a1.251,1.251,0,0,0,0-2.5,1.251,1.251,0,0,0,0,2.5Z"/>
+                                  <path d="M26.525,18.4a1.251,1.251,0,0,0,0-2.5,1.251,1.251,0,0,0,0,2.5Z"/>
+                                  <path d="M28.886,34.75a4.9,4.9,0,0,1-4.752-3.663l-1.4-4.1a20.448,20.448,0,0,1-10.436-.068l-1.456,4.257a4.725,4.725,0,0,1-1.717,2.549,4.905,4.905,0,0,1-7.9-3.836V19.2c0-.31.038-.868.054-1.08l-.052-.945A10.494,10.494,0,0,1,11.693,6.641a10.351,10.351,0,0,1,3.728.686,3.821,3.821,0,0,0,1.373.235h1.412a3.751,3.751,0,0,0,1.353-.227A10.32,10.32,0,0,1,23.5,6.643,10.674,10.674,0,0,1,33.781,17.42V29.892A4.881,4.881,0,0,1,28.886,34.75ZM23.5,24.141a1.253,1.253,0,0,1,1.183.846l1.841,5.384a2.438,2.438,0,0,0,2.359,1.879,2.379,2.379,0,0,0,2.395-2.358V17.42a8.163,8.163,0,0,0-7.822-8.277,7.78,7.78,0,0,0-3,.524h0a6.249,6.249,0,0,1-2.255.395H16.794a6.311,6.311,0,0,1-2.269-.4,7.858,7.858,0,0,0-2.832-.52,7.978,7.978,0,0,0-7.974,7.965l.054.955a1.9,1.9,0,0,1,0,.2c-.011.141-.05.66-.05.938V29.892a2.406,2.406,0,0,0,3.871,1.86,2.35,2.35,0,0,0,.855-1.29l1.869-5.475a1.251,1.251,0,0,1,1.59-.777c.062.02,6.155,2.075,11.123.025A1.247,1.247,0,0,1,23.5,24.141ZM20.01,8.5h0Z"/>
+                                  <path d="M18.294,7.261a1.23,1.23,0,0,1-.105-1.184,1.891,1.891,0,0,1,.874-1.04A4.97,4.97,0,0,1,22.7,4.874a8.184,8.184,0,0,0,4.595.142A3.683,3.683,0,0,0,29.854,1.5,1.278,1.278,0,0,0,28.6.25a1.262,1.262,0,0,0-1.25,1.25c.066,1.244-1.558,1.378-2.5,1.266-1.574-.186-3.049-.792-4.663-.617a5.182,5.182,0,0,0-3.917,2.183,3.982,3.982,0,0,0-.137,4.19c.836,1.372,3,.117,2.158-1.261Z"/>
+                              </svg>
+                              <span>Commenter</span>
+                          </a>
+                      </nav>
+                  </div>
+                  <div class="pt-2">
+                      <button type="button" class="flex items-center space-x-3 py-3 px-4 w-full leading-6 text-md focus:outline-none hover:bg-gray-100 rounded-md">
+                          <svg class="w-7 h-7" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none">
+                              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                              <path d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2"></path>
+                              <path d="M9 12h12l-3 -3"></path>
+                              <path d="M18 15l3 -3"></path>
+                          </svg>
+                          <span>Déconnecter</span>
+                      </button>
+                  </div>
+              </div>
+          </div>
+      </div>
+        
+
+      </div>
+  
+      <!-- Mobile Menu Button -->
+      <button title="Open menu" type="button" class="p-4 lg:hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 text-white">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <br/><br/><br/>
+  <!-- Hero -->
+<!-- <div class="lg:bg-gray-500 sm:mt-0 max-w-full max-h-[60rem] mx-auto px-4 sm:px-6 lg:px-8"> -->
+<div class="lg:bg-gray-500 sm:mt-0 w-screen max-w-none max-h-[60rem] pt-8 md:pt-0 px-4 sm:px-6 lg:px-8 overflow-hidden">
+
+  <!-- Grid -->
+
+
+ <!-- Carousel wrapper -->
+ 
+  
+
+<!-- Item 1 -->
+  <div class="carousel-item w-11/12 absolute -z-[1] grid mb-16 md:grid-cols-2 gap-4 md:gap-8 xl:gap-20 md:items-center">
+
+    <div class="lg:relative left-[60px] lg:top-[50px]">
+      <h1 class="block text-3xl font-bold text-gray-800 sm:text-4xl lg:leading-tight dark:text-white">L'innocence et l'appréhension du premier jour <span class="text-blue-600">d'école.</span></h1>
+      <p class="mt-3 text-lg text-gray-800 dark:text-neutral-400">Les premiers pas vers le savoir ne sont jamais faciles. Entre les larmes et l’incertitude, c’est un voyage qui commence, main dans la main avec ceux qui croient en nous</p>
+
+      <!-- Buttons -->
+      <div class="mt-7 grid gap-3 w-full sm:inline-flex">
+        <a class="py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none" href="">
+          Who is Christopher Wavoeke ?
+          <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+        </a>
+        <a href="https://www.exemple.com" class="py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-blue-400 shadow-sm cursor-pointer ">
+          Commencer
+        </a>
+      </div>
+      <!-- End Buttons -->
+
+      
+    </div>
+    <!-- End Col -->
+
+     <div class="relative  lg:-right-[80px]  ms-4">
+      <img class="w-full lg:w-[480px] h-11/12rounded-md mt-8" src="image_AI\DALL·E 2025-02-01 01.23.02 - A young child crying .webp" alt="Hero Image">
+      <div class="absolute inset-0 -z-[1] bg-gradient-to-tr from-gray-200 via-white/0 to-white/0 size-full rounded-md mt-4 -mb-4 me-4 -ms-4 lg:mt-6 lg:-mb-6 lg:me-6 lg:-ms-6 dark:from-neutral-800 dark:via-neutral-900/0 dark:to-neutral-900/0"></div>
+    </div>
+    <!-- End Col -->
+
+    <!-- Slider controls -->
+    
+  </div>
+
+
+
+
+ <!-- Item 2 -->
+  <div class="carousel-item w-11/12 absolute -z-[1] opacity-0 transition-opacity duration-700 ease-in-out grid mb-16 md:grid-cols-2 gap-4 md:gap-8 xl:gap-20 md:items-center">
+
+    <div class="lg:relative left-[60px] lg:top-[50px]">
+      <h1 class="block text-3xl font-bold text-gray-800 sm:text-4xl lg:leading-tight dark:text-white">Les premières victoires et la découverte du <span class="text-blue-600">monde</span></h1>
+      <p class="mt-3 text-lg text-gray-800 dark:text-neutral-400">Les années passent, et le sourire s'élargit. Le cartable devient un compagnon d'aventure, et chaque jour est une nouvelle occasion d'apprendre, de rêver et de se dépasser.</p>
+
+      <!-- Buttons -->
+      <div class="mt-7 grid gap-3 w-full sm:inline-flex">
+        <a class="py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none" href="Sign_in.html">
+          Who is Christopher Wavoeke ?
+          <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+        </a>
+        <a class="py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-blue-400 shadow-sm cursor-pointer" href="Sign_in.html">
+          Commencer
+        </a>
+      </div>
+      <!-- End Buttons -->
+
+      
+    </div>
+    <!-- End Col -->
+
+    <div class="relative  lg:-right-[80px]  ms-4">
+      <img class="w-full lg:w-[480px] h-11/12rounded-md mt-8" src="image_AI\DALL·E 2025-02-01 01.23.07 - A cheerful middle school student smiling .webp" alt="Hero Image">
+      <div class="absolute inset-0 -z-[1] bg-gradient-to-tr from-gray-200 via-white/0 to-white/0 size-full rounded-md mt-4 -mb-4 me-4 -ms-4 lg:mt-6 lg:-mb-6 lg:me-6 lg:-ms-6 dark:from-neutral-800 dark:via-neutral-900/0 dark:to-neutral-900/0"></div>
+    </div>
+    <!-- End Col -->
+
+    <!-- Slider controls -->
+    
+  </div>
+
+
+
+
+  <!-- Item 3 -->
+  <div class="carousel-item w-11/12 absolute -z-[1] opacity-0 transition-opacity duration-700 ease-in-out grid mb-16 md:grid-cols-2 gap-4 md:gap-8 xl:gap-20 md:items-center">
+
+    <div class="lg:relative left-[60px] lg:top-[50px]">
+      <h1 class="block text-3xl font-bold text-gray-800 sm:text-4xl lg:leading-tight dark:text-white"> L’université : le goût de l’indépendance et des  <span class="text-blue-600">défis</span></h1>
+      <p class="mt-3 text-lg text-gray-800 dark:text-neutral-400">L'apprentissage prend une autre dimension. Les amitiés forgées, les nuits blanches de révision et les ambitions grandissent. C’est le début d’une quête vers l'excellence et la réalisation de soi.</p>
+
+      <!-- Buttons -->
+      <div class="mt-7 grid gap-3 w-full sm:inline-flex">
+        <a class="py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none" href="">
+          Who is Christopher Wavoeke ?
+          <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+        </a>
+        <a class="py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-blue-400 shadow-sm cursor-pointer " href="Sign_in.html">
+          Commencer
+        </a>
+      </div>
+      <!-- End Buttons -->
+
+      
+    </div>
+    <!-- End Col -->
+
+    <div class="relative  lg:-right-[80px]  ms-4">
+      <img class="w-full lg:w-[480px] h-11/12rounded-md mt-8" src="image_AI\DALL·E 2025-02-01 01.23.09 - A university student sitting with classmates in a campus setting.webp" alt="Hero Image">
+      <div class="absolute inset-0 -z-[1] bg-gradient-to-tr from-gray-200 via-white/0 to-white/0 size-full rounded-md mt-4 -mb-4 me-4 -ms-4 lg:mt-6 lg:-mb-6 lg:me-6 lg:-ms-6 dark:from-neutral-800 dark:via-neutral-900/0 dark:to-neutral-900/0"></div>
+    </div>
+    <!-- End Col -->
+
+    
+  </div>
+
+
+
+
+  <!-- Item 3 -->
+  <div class="carousel-item w-11/12 absolute -z-[1] opacity-0 transition-opacity duration-700 ease-in-out grid mb-16 md:grid-cols-2 gap-4 md:gap-8 xl:gap-20 md:items-center">
+
+    <div class="lg:relative left-[60px] lg:top-[50px]">
+      <h1 class="block text-3xl font-bold text-gray-800 sm:text-4xl lg:leading-tight dark:text-white">La vie professionnelle : l’aboutissement et les nouveaux  <span class="text-blue-600">horizons</span></h1>
+      <p class="mt-3 text-lg text-gray-800 dark:text-neutral-400">Des années d’efforts qui se matérialisent enfin. Entre responsabilités, passion et défis quotidiens, chaque projet accompli est un pas de plus vers l’accomplissement de son rêve.</p>
+
+      <!-- Buttons -->
+      <div class="mt-7 grid gap-3 w-full sm:inline-flex">
+        <a class="py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none" href="">
+          Who is Christopher Wavoeke ?
+          <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+        </a>
+        <a class="py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-blue-400 shadow-sm cursor-pointer " href="Sign_in.html">
+          Commencer
+        </a>
+      </div>
+      <!-- End Buttons -->
+
+      
+    </div>
+    <!-- End Col -->
+
+    <div class="relative  lg:-right-[80px]  ms-4">
+      <img class="w-full lg:w-[480px] h-11/12rounded-md mt-8" src="image_AI\DALL·E 2025-02-01 01.23.14 - A professional adult in a modern corporate office, .webp" alt="Hero Image">
+      <div class="absolute inset-0 -z-[1] bg-gradient-to-tr from-gray-200 via-white/0 to-white/0 size-full rounded-md mt-4 -mb-4 me-4 -ms-4 lg:mt-6 lg:-mb-6 lg:me-6 lg:-ms-6 dark:from-neutral-800 dark:via-neutral-900/0 dark:to-neutral-900/0"></div>
+    </div>
+    <!-- End Col -->
+
+    
+  </div
+
+
+
+
+
+  <!-- Slider indicators -->
+  <div class="flex absolute bottom-5 -z-[1] left-1/2 -translate-x-1/2 space-x-2">
+    <button class="indicator w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-400"></button>
+    <button class="indicator w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-400"></button>
+    <button class="indicator w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-400"></button>
+    <button class="indicator w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-400"></button>
+  </div>
+
+
+  <!-- Slider controls -->
+  <button id="prev"
+    class="bg-blue-500 text-white absolute top-1/2 left-3  w-10 h-10 rounded-full hover:bg-blue-600 flex items-center justify-center">
+    <svg class="w-5 h-5 text-white-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+    </svg>
+  </button>
+  <button id="next"
+      class="bg-blue-500 text-white absolute top-1/2 right-3  w-10 h-10 rounded-full hover:bg-blue-600 flex items-center justify-center">
+      <svg class="w-5 h-5 text-white-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+      </svg>
+  </button>
+  
+
+  <!-- End Grid -->
+</div>
+<!-- End Hero -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="mt-[300px] sm:mt-[430px] md:mt-[0px]">
+
+</div>
+
+
+
+<br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<div class="static w-full h-screen bg-white-100 dark:bg-gray-800">
+  <div class="w-full h-full py-20 flex flex-wrap justify-center items-center gap-2">
+      <div
+          class="w-[20rem] mx-auto flex flex-col shadow-xl gap-2 px-4 mt-6 sm:mt-0 border border-gray-300 border-gray-300 rounded-lg bg-white dark:bg-gray-900">
+          <div class="w-full flex justify-center items-center">
+              <img class="w-[8rem] h-[8rem] rounded-full outline outline-offset-2 outline-1 outline-blue-400 shadow-lg relative -top-[4rem]" src="Mes_images\IMG_3556.jpg" alt="Profile Image" />
+          </div>
+
+          <div class="w-full h-full text-center flex flex-col gap-4 relative -top-10">
+              <h1 class="uppercase text-lg font-semibold dark:text-white">
+                  Mes débuts
+              </h1>
+
+              <p class="text-gray-700 dark:text-gray-300">
+                Je m'appelle : Christophe Wavoeke, ingénieur en Génie Mathématique, spécialisé en modélisation et en programmation informatique.  
+              </p>
+
+              <button onclick="showContent('newContent1')" class="w-[60%] mx-auto bg-blue-500 text-white rounded-3xl px-4 py-2">Lire</button>
+          </div>
+
+      </div>
+      <div
+          class="w-[20rem] mx-auto flex flex-col shadow-xl gap-2 px-4 mt-6 sm:mt-0 border border-gray-300 border-gray-300 rounded-lg bg-white dark:bg-gray-900">
+          <div class="w-full flex justify-center items-center">
+              <img class="w-[8rem] h-[8rem] rounded-full outline outline-offset-2 outline-1 outline-blue-400 shadow-lg relative -top-[4rem]" src="Mes_images\IMG_3540.jpg" alt="Profile Image" />
+          </div>
+
+          <div class="w-full h-full text-center flex flex-col gap-4 relative -top-10">
+              <h1 class="uppercase text-lg font-semibold dark:text-white">
+                  Niveau universitaire
+              </h1>
+
+              <p class="text-gray-700 dark:text-gray-300">
+                Après l'obtention de mon baccalauréat, ma passion pour les mathématiques m'a poussé à passer deux concours : celui pour l'ENS (École Normale Supérieure) de Natitingou et celui de l'INSPEI (Institut National Supérieur des Classes Préparatoires aux Études d'Ingénieur)
+              </p>
+
+              <button onclick="showContent('newContent2')" class="w-[60%] mx-auto bg-blue-500 text-white rounded-3xl px-4 py-2">Lire</button>
+          </div>
+
+      </div>
+      <div
+          class="w-[20rem] mx-auto flex flex-col shadow-xl gap-2 px-4 mt-6 sm:mt-0 border border-gray-300 border-gray-300 rounded-lg bg-white dark:bg-gray-900">
+          <div class="w-full flex justify-center items-center">
+              <img class="w-[8rem] h-[8rem] rounded-full outline outline-offset-2 outline-1 outline-blue-400 relative -top-[4rem]" src="Mes_images\In my Jacket.jpeg" alt="Profile Image" />
+          </div>
+
+          <div class="w-full h-full text-center flex flex-col gap-4 relative -top-10">
+              <h1 class="uppercase text-lg font-semibold dark:text-white">
+                  Expériences pro
+              </h1>
+
+              <p class="text-gray-700 dark:text-gray-300">
+                j'ai commencé à me former moi-même aux langages de programmation web avec un ami. En environ huit mois, j'ai maîtrisé le HTML, CSS, PHP et JavaScript, ce qui m'a permis de réaliser de petits projets sur mon ordinateur
+              </p>
+
+              <button onclick="showContent('newContent3')" class="w-[60%] mx-auto bg-blue-500 text-white rounded-3xl px-4 py-2">Lire</button>
+          </div>
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="newContent1" class="fade-in z-[3] overflow-auto fixed inset-0 bg-white flex flex-col lg:w-screen items-center justify-center w-screen hidden">
+
+
+  <button onclick="goBack('newContent1')" class="absolute top-4 right-4">
+    <svg class="w-10 h-10 text-gray-600 hover:text-gray-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+    </svg>
+  </button>
+
+
+  <section class="lg:h-[800px] text-black body-font">
+    <div class="mt-[1000px] sm:mt-[850px] md:mt-[850px] lg:mt-[0px] lg:grid lg:grid-cols-2 container px-5 py-24 mx-auto lg:flex lg:flex-wrap">
+      <div class="sm:w-2/3 sm:mx-auto lg:w-full mb-10 lg:mb-0 rounded-lg overflow-hidden">
+        <img alt="feature" class="object-cover object-center h-full w-full" src="Mes_images\IMG_3556.jpg">
+      </div>
+      <div class="flex flex-col flex-wrap lg:py-6 -mb-10 lg:w-full lg:pl-12 lg:text-left text-center">
+        
+       
+        <div class="flex flex-col mb-10 lg:items-start items-center">
+  
+          <div class="flex-grow text-justify">
+            <h2 class="text-gray-900 text-lg title-font font-medium mb-3">Bienvenue au partage de ma petite expérience !  </h2>
+            <p class="leading-relaxed text-base">
+
+              Je m'appelle : Christophe Wavoeke, ingénieur en Génie Mathématique, spécialisé en modélisation et en programmation informatique.  
+              Avant d’entrer dans le vif du sujet, permettez-moi de revenir sur mon parcours.Mon début de scolarité primaire s'effectué dans une école privée, le <div></div>Complexe scolaire Les Merveilles, où j’ai suivi mon parcours depuis la maternelle jusqu’au CM2, la classe charnière pour le premier grand examen national au Bénin. J’ai obtenu mon <div></div>Certificat d'Études Primaires (CEP) du premier coup, une étape qui marquait le début de mon aventure académique.  
+              Souhaitant découvrir un nouvel environnement et relever d'autres défis, j’ai poursuivi mes études secondaires dans un établissement public, le <div></div>Collège d’Enseignement Général (CEG) de Honvié.J'ai obtenu mon <div></div>Brevet d’Études du Premier Cycle (BEPC) dès ma première tentative, en 2016. Cette année-là, le taux de réussite national était particulièrement bas, avoisinant les <div></div>16,.. %. Je me souviens de cette période où l’inquiétude était omniprésente, mais mon travail a porté ses fruits, et j’en garde aujourd’hui une immense fierté.  
+              Dès le second cycle du collège,je me suis particulièrement investi en mathématiques. Cet engagement m’a naturellement conduit à choisir une filière scientifique. J'ai fait la série , et j'ai obtenu mon baccalauréat avec mention Assez Bien.  
+              Toujours passionné par les mathématiques et, plus largement, par les sciences, [...]</p>
+            <a class="mt-3 text-indigo-500 inline-flex items-center"><!-- <svg class="transform transition duration-300 hover:-translate-x-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+  <path fill-rule="evenodd" d="M7.28 7.72a.75.75 0 0 1 0 1.06l-2.47 2.47H21a.75.75 0 0 1 0 1.5H4.81l2.47 2.47a.75.75 0 1 1-1.06 1.06l-3.75-3.75a.75.75 0 0 1 0-1.06l3.75-3.75a.75.75 0 0 1 1.06 0Z" clip-rule="evenodd" />
+</svg> -->
+<div class="pl-3 pr-3">Savoir plus</div>
+             <svg onclick="folow('2')" class="transform transition duration-300 hover:translate-x-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+  <path fill-rule="evenodd" d="M16.72 7.72a.75.75 0 0 1 1.06 0l3.75 3.75a.75.75 0 0 1 0 1.06l-3.75 3.75a.75.75 0 1 1-1.06-1.06l2.47-2.47H3a.75.75 0 0 1 0-1.5h16.19l-2.47-2.47a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+</svg>
+
+            </a>
+          </div>
+        </div>
+
+
+
+      </div>
+    </div>
+  </section>
+</div>
+
+
+
+
+
+<div id="newContent2" class="fade-in z-[3] overflow-auto fixed inset-0 bg-white flex flex-col lg:w-screen items-center justify-center w-screen hidden">
+
+
+  <button onclick="goBack('newContent2')" class="absolute top-4 right-4">
+    <svg class="w-10 h-10 text-gray-600 hover:text-gray-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+    </svg>
+  </button>
+
+
+  <section class="lg:h-[800px] text-black body-font">
+    <div class="mt-[1000px] sm:mt-[850px] md:mt-[850px] lg:mt-[0px] lg:grid lg:grid-cols-2 container px-5 py-24 mx-auto lg:flex lg:flex-wrap">
+      <div class="sm:w-2/3 sm:mx-auto lg:w-full mb-10 lg:mb-0 rounded-lg overflow-hidden">
+        <img alt="feature" class="object-cover object-center h-full w-full" src="Mes_images\IMG_3540.jpg">
+      </div>
+      <div class="flex flex-col flex-wrap lg:py-6 -mb-10 lg:w-full lg:pl-12 lg:text-left text-center">
+        
+
+       
+        <div class="flex flex-col mb-10 lg:items-start items-center">
+  
+          <div class="flex-grow">
+            <h2 class="text-gray-900 text-lg title-font font-medium mb-3">Niveau universitaire</h2>
+            <p class="leading-relaxed text-base">Après l'obtention de mon baccalauréat, ma passion pour les mathématiques m'a poussé à passer deux concours : celui pour l'ENS (École Normale Supérieure) de Natitingou et celui de l'INSPEI (Institut National Supérieur des Classes Préparatoires aux Études d'Ingénieur). J'ai été admis aux deux concours. La première école, limitée à Bac+3, offre des débouchés dans l'enseignement, la recherche ou la poursuite des études. La deuxième, école préparatoire, permet d'intégrer des écoles d'ingénieurs. J'ai choisi l'INSPEI, où j'ai brillamment réussi, avant de poursuivre à l'ENSGMM (École Nationale Supérieure de Génie Mathématique et Modélisation), où j'ai suivi une formation approfondie en Informatique, Recherche Opérationnelle et Logistique (IRLO), Modélisation Aléatoire, Statistique et Finance (MASF), ainsi qu'en Modélisation et Simulation Numérique.</p>
+            <a class="mt-3 text-indigo-500 inline-flex items-center"><svg onclick="prev('1')" class="transform transition duration-300 hover:-translate-x-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+  <path fill-rule="evenodd" d="M7.28 7.72a.75.75 0 0 1 0 1.06l-2.47 2.47H21a.75.75 0 0 1 0 1.5H4.81l2.47 2.47a.75.75 0 1 1-1.06 1.06l-3.75-3.75a.75.75 0 0 1 0-1.06l3.75-3.75a.75.75 0 0 1 1.06 0Z" clip-rule="evenodd" />
+</svg>
+<div class="pl-3 pr-3">Savoir plus</div>
+             <svg onclick="folow('3')" class="transform transition duration-300 hover:translate-x-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+  <path fill-rule="evenodd" d="M16.72 7.72a.75.75 0 0 1 1.06 0l3.75 3.75a.75.75 0 0 1 0 1.06l-3.75 3.75a.75.75 0 1 1-1.06-1.06l2.47-2.47H3a.75.75 0 0 1 0-1.5h16.19l-2.47-2.47a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+</svg>
+
+            </a>
+          </div>
+        </div> 
+
+      </div>
+    </div>
+  </section>
+</div>
+
+
+
+
+
+
+
+<div id="newContent3" class="fade-in z-[3] overflow-auto fixed inset-0 bg-white flex flex-col lg:w-screen items-center justify-center w-screen hidden">
+
+
+  <button onclick="goBack('newContent3')" class="absolute top-4 right-4">
+    <svg class="w-10 h-10 text-gray-600 hover:text-gray-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+    </svg>
+  </button>
+
+
+  <section class="lg:h-[800px] text-black body-font">
+    <div class="mt-[1000px] sm:mt-[850px] md:mt-[850px] lg:mt-[0px] lg:grid lg:grid-cols-2 container px-5 py-24 mx-auto lg:flex lg:flex-wrap">
+      <div class="sm:w-2/3 sm:mx-auto lg:w-full mb-10 lg:mb-0 rounded-lg overflow-hidden">
+        <img alt="feature" class="object-cover object-center h-full w-full" src="Mes_images\In my Jacket.jpeg">
+      </div>
+      <div class="flex flex-col flex-wrap lg:py-6 -mb-10 lg:w-full lg:pl-12 lg:text-left text-center">
+        
+
+       
+        <div class="flex flex-col mb-10 lg:items-start items-center">
+  
+          <div class="flex-grow">
+            <h2 class="text-gray-900 text-lg title-font font-medium mb-3">Expériences professionnelles</h2>
+            <p class="leading-relaxed text-base">J'ai principalement appris par auto-formation. Dès ma première année en classes préparatoires, après avoir pris en main le cours de programmation en langage C, j'ai commencé à me former moi-même aux langages de programmation web avec un ami. En environ huit mois, j'ai maîtrisé le HTML, CSS, PHP et JavaScript, ce qui m'a permis de réaliser de petits projets sur mon ordinateur. Par la suite, j'ai découvert certains frameworks pour le développement web. 
+
+              Notre programme de formation en ingénierie requiert un bon niveau de programmation dans différents langages. Ainsi, nous avons étudié le C, R, Matlab, Python, ainsi que LaTeX pour la rédaction des documents de projet. Lors de mon premier stage, j'ai travaillé sur les bases de données agricoles à la DDAEP. Pendant mon deuxième stage, j'ai développé une méthode de prédiction spatiale en utilisant Matlab et Python, ainsi que des méthodes de résolution numérique.</p>
+            <a class="mt-3 text-indigo-500 inline-flex items-center"><svg onclick="prev('2')" class="transform transition duration-300 hover:-translate-x-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+  <path fill-rule="evenodd" d="M7.28 7.72a.75.75 0 0 1 0 1.06l-2.47 2.47H21a.75.75 0 0 1 0 1.5H4.81l2.47 2.47a.75.75 0 1 1-1.06 1.06l-3.75-3.75a.75.75 0 0 1 0-1.06l3.75-3.75a.75.75 0 0 1 1.06 0Z" clip-rule="evenodd" />
+</svg>
+<div class="pl-5 pr-5 inline">Savoir plus</div>
+             <!-- <svg class="transform transition duration-300 hover:translate-x-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+  <path fill-rule="evenodd" d="M16.72 7.72a.75.75 0 0 1 1.06 0l3.75 3.75a.75.75 0 0 1 0 1.06l-3.75 3.75a.75.75 0 1 1-1.06-1.06l2.47-2.47H3a.75.75 0 0 1 0-1.5h16.19l-2.47-2.47a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" /> -->
+</svg>
+
+            </a>
+          </div>
+        </div>
+
+
+
+      </div>
+    </div>
+  </section>
+</div>
+
+
+
+
+ 
+
+
+<script>
+  
+  function active(id){
+    //const section1 = document.getElementById(id);
+    //indice=parseInt(str, 10); // Conversion en entier en base 10
+
+    for (let i = 1; i < 4; i++) {
+        content=newContent+i ;
+        alert('ça marche')
+        if (content!=id) {
+            document.getElementById(content).classList.remove("hidden");
+        } 
+        else {
+            document.getElementById(content).classList.add("hidden");
+            document.getElementById(content)
+        }
+
+    }
+
+}
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="mt-[900px] sm:mt-[780px] md:mt-[230px] lg:mt-[0px]">
+
+
+</div>
+
+<div class="justify-center">
+  <p class="text-center font-bold text-2xl text-blue-500">Backend Compétences</p>
+</div>
+
+
+
+<div class="grid grid-cols-2 lg:grid-cols-4 justify-items-center items-start gap-6 h-[450px] w-full px-4 py-10 sm:px-6 lg:px-8 lg:pt-8 mx-auto">
+
+
+<div class="text-left p-1">
+<div class="flex justify-center items-center size-12 bg-gray-50 border border-gray-200 rounded-full mx-auto dark:bg-neutral-800 dark:border-neutral-700">
+  <img alt="SVG\php.svg" src="NestJS" />
+</div>
+<div class="mt-3">
+  
+<div class="dark:bg-gray-800 h-screen w-full flex justify-start items-start">
+  <fieldset class="text-xl max-w-md border-2 border-indigo-400 rounded-lg px-4 py-2">
+  <legend class="px-1 font-semibold text-center dark:text-gray-100">Php frameworks</legend>
+  <div class="flex flex-col gap-2 text-base text-violet-800 dark:text-gray-200">
+
+    <a href="">Laravel </a>
+    <a href="">Symfony</a>
+    
+  </div>
+  </fieldset>
+  </div>
+
+</div>
+</div>
+<!-- End Icon Block -->
+
+<!-- Icon Block -->
+<div class="text-left">
+<div class="flex justify-center items-center size-12 bg-gray-50 border border-gray-200 rounded-full mx-auto dark:bg-neutral-800 dark:border-neutral-700">
+  <svg class="shrink-0 size-5 text-gray-600 dark:text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7h-9"/><path d="M14 17H5"/><circle cx="17" cy="17" r="3"/><circle cx="7" cy="7" r="3"/></svg>
+</div>
+<div class="mt-3">
+  
+<div class="dark:bg-gray-800 h-screen w-full flex justify-start items-start">
+  <fieldset class="text-xl max-w-md border-2 border-indigo-400 rounded-lg px-4 py-2">
+  <legend class="px-1 font-semibold text-center dark:text-gray-100">Python frameworks</legend>
+  <div class="flex flex-col gap-2 text-base text-violet-800 dark:text-gray-200">
+    <a href="">Django</a>
+    <a href="">FastAPI</a>
+    <a href="">Flask</a>
+  </div>
+  </fieldset>
+  </div>
+  
+</div>
+</div>
+<!-- End Icon Block -->
+
+<!-- Icon Block -->
+<div class="text-left">
+  <div class="flex justify-center items-center size-12 bg-gray-50 border border-gray-200 rounded-full mx-auto dark:bg-neutral-800 dark:border-neutral-700">
+    <svg class="shrink-0 size-5 text-gray-600 dark:text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7h-9"/><path d="M14 17H5"/><circle cx="17" cy="17" r="3"/><circle cx="7" cy="7" r="3"/></svg>
+  </div>
+  <div class="mt-3">
+    
+  <div class="dark:bg-gray-800 h-screen w-full flex justify-start items-start">
+    <fieldset class="text-xl max-w-md border-2 border-indigo-400 rounded-lg px-4 py-2">
+    <legend class="px-1 font-semibold text-center dark:text-gray-100">Database SQL</legend>
+    <div class="flex flex-col gap-2 text-base text-violet-800 dark:text-gray-200">
+      <a href="">MySQL</a>
+      <a href="">PostgreSQL</a>
+      <a href="">SQLite</a>
+      <a href="">Oracle</a>
+      <a href="">MongoDB</a>
+      <a href="">Firebase</a>
+    </div>
+    </fieldset>
+    </div>
+    
+  </div>
+  </div>
+<!-- End Icon Block -->
+
+
+
+
+
+<!-- Icon Block -->
+<div class="text-left">
+<div class="flex justify-center items-center size-12 bg-gray-50 border border-gray-200 rounded-full mx-auto dark:bg-neutral-800 dark:border-neutral-700">
+  <svg class="shrink-0 size-5 text-gray-600 dark:text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9a2 2 0 0 1-2 2H6l-4 4V4c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2v5Z"/><path d="M18 9h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1"/></svg>
+</div>
+<div class="mt-3">
+  
+<div class="dark:bg-gray-800 h-screen w-full flex justify-start items-start">
+  <fieldset class="text-xl max-w-md border-2 border-indigo-400 rounded-lg px-4 py-2">
+  <legend class="px-1 font-semibold text-center dark:text-gray-100">cloud Hosting</legend>
+  <div class="flex flex-col gap-2 text-base text-violet-800 dark:text-gray-200">
+    <a href="">Google Cloud Platform (GCP)</a>
+    <a href="">Render</a>
+    <a href="">Vercel</a>
+    <a href="">Docker</a>
+    <a href="">GitHub Pages</a>
+  </div>
+  </fieldset>
+  </div>
+
+</div>
+</div>
+<!-- End Icon Block -->
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="mt-[600px] sm:mt-[600px] md:mt-[800px] lg:mt-[-120px]">
+
+
+</div>
+
+
+<div class="justify-center">
+  <p class="text-center font-bold text-2xl text-blue-500">Frontend Compétences</p>
+</div>
+
+
+
+<div class="grid grid-cols-2 items-start justify-items-center place-content-evenly gap-6 w-full px-4 py-10 sm:px-6 lg:px-8 lg:pt-8 mx-auto">
+
+
+      <div class="text-left p-1">
+      <div class="flex justify-center items-center size-12 bg-gray-50 border border-gray-200 rounded-full mx-auto dark:bg-neutral-800 dark:border-neutral-700">
+        <svg class="shrink-0 size-5 text-gray-600 dark:text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="10" height="14" x="3" y="8" rx="2"/><path d="M5 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2h-2.4"/><path d="M8 18h.01"/></svg>
+      </div>
+      <div class="mt-3">
+        
+      <div class="dark:bg-gray-800 h-screen w-full flex justify-start items-start">
+        <fieldset class="text-xl max-w-md border-2 border-indigo-400 rounded-lg px-4 py-2">
+        <legend class="px-1 font-semibold text-center dark:text-gray-100">CSS frameworks</legend>
+        <div class="flex flex-col gap-2 text-base text-violet-800 dark:text-gray-200">
+          <a href="">Tailwind CSS </a>
+          <a href="">Bootstrap</a>
+        </div>
+        </fieldset>
+        </div>
+
+      </div>
+      </div>
+      <!-- End Icon Block -->
+
+      <!-- Icon Block -->
+      <div class="text-left">
+      <div class="flex justify-center items-center size-12 bg-gray-50 border border-gray-200 rounded-full mx-auto dark:bg-neutral-800 dark:border-neutral-700">
+        <svg class="shrink-0 size-5 text-gray-600 dark:text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7h-9"/><path d="M14 17H5"/><circle cx="17" cy="17" r="3"/><circle cx="7" cy="7" r="3"/></svg>
+      </div>
+      <div class="mt-3">
+        
+      <div class="dark:bg-gray-800 h-screen w-full flex justify-start items-start">
+        <fieldset class="text-xl max-w-md border-2 border-indigo-400 rounded-lg px-4 py-2">
+        <legend class="px-1 font-semibold text-center dark:text-gray-100">JavaScript frameworks</legend>
+        <div class="flex flex-col gap-2 text-base text-violet-800 dark:text-gray-200">
+          <a href="">React.js</a>
+          <a href="">Vue.js</a>
+          <a href="">Angular</a>
+          <a href="">Express.js</a>
+          <a href="">NestJS</a>
+        </div>
+        </fieldset>
+        </div>
+        
+      </div>
+      </div>
+      <!-- End Icon Block -->
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+<div class="-mt-[600px] sm:-mt-[650px] md:-mt-[730px] xl:-mt-[780px] max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+  <!-- Title -->
+  <div class="max-w-2xl mx-auto text-center mb-10 lg:mb-14">
+    <h2 class="text-2xl font-bold md:text-4xl md:leading-tight dark:text-white">Amis</h2>
+  </div>
+  <!-- End Title -->
+
+  <!-- Grid -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div class="flex flex-col rounded-xl p-4 md:p-6 bg-white border border-gray-200 dark:bg-neutral-900 dark:border-neutral-700">
+      <div class="flex items-center gap-x-4">
+        <img class="rounded-full size-20 duration-300 hover:scale-150" src="Amis\Hope.jfif" alt="Avatar">
+        <div class="grow">
+          <h3 class="font-medium text-gray-800 dark:text-neutral-200">
+            Hope LANMAYIKPOHOUE
+          </h3>
+          <p class="text-xs uppercase text-gray-500 dark:text-neutral-500">
+           Ingénieur en ILRO ( Informatique , Logistique et Recherche Opérationnelle)
+          </p>
+        </div>
+      </div>
+
+      <p class="mt-3 text-gray-500 dark:text-neutral-500">
+        Spécialiste en développement backend et en développement Mobile 
+      </p>
+
+      <!-- Social Brands -->
+      <div class="mt-3 space-x-1">
+        
+      </div>
+      <!-- End Social Brands -->
+    </div>
+    <!-- End Col -->
+
+    <div class="flex flex-col rounded-xl p-4 md:p-6 bg-white border border-gray-200 dark:bg-neutral-900 dark:border-neutral-700">
+      <div class="flex items-center gap-x-4">
+        <img class="rounded-full size-20 duration-300 hover:scale-150" src="Amis\Aubin.jfif" alt="Avatar">
+        <div class="grow">
+          <h3 class="font-medium text-gray-800 dark:text-neutral-200">
+            Aubin NOUNAGNON
+          </h3>
+          <p class="text-xs uppercase text-gray-500 dark:text-neutral-500">
+            Ingénieur en Informatique
+          </p>
+        </div>
+      </div>
+
+      <p class="mt-3 text-gray-500 dark:text-neutral-500">
+        Je fais plus designer UX / Figma pour les interfaces mobile et web .
+      </p>
+
+      <!-- Social Brands -->
+      <div class="mt-3 space-x-1">
+        
+      </div>
+      <!-- End Social Brands -->
+    </div>
+    <!-- End Col -->
+
+    <div class="flex flex-col rounded-xl p-4 md:p-6 bg-white border border-gray-200 dark:bg-neutral-900 dark:border-neutral-700">
+      <div class="flex items-center gap-x-4">
+        <img class="rounded-full size-20 duration-300 hover:scale-150" src="Amis\Marcellin.jpg" alt="Avatar">
+        <div class="grow">
+          <h3 class="font-medium text-gray-800 dark:text-neutral-200">
+            Marcellin OGOUNGBE
+          </h3>
+          <p class="text-xs uppercase text-gray-500 dark:text-neutral-500">
+            Ingénieur en Modélisation et Simulation Numérique
+          </p>
+        </div>
+      </div>
+
+      <p class="mt-3 text-gray-500 dark:text-neutral-500">
+        Résolution des problèmes sous forme de dérivée partielle qui répond un phénomème explicable
+      </p>
+
+      <!-- Social Brands -->
+      <div class="mt-3 space-x-1">
+        
+      </div>
+      <!-- End Social Brands -->
+    </div>
+    <!-- End Col -->
+
+    <div class="flex flex-col rounded-xl p-4 md:p-6 bg-white border border-gray-200 dark:bg-neutral-900 dark:border-neutral-700">
+      <div class="flex items-center gap-x-4">
+        <img class="rounded-full size-20 duration-300 hover:scale-150" src="Amis\Cyrille.jpg" alt="Avatar">
+        <div class="grow">
+          <h3 class="font-medium text-gray-800 dark:text-neutral-200">
+            Cyrille ATOLLOU
+          </h3>
+          <p class="text-xs uppercase text-gray-500 dark:text-neutral-500">
+            Ingénieur en Finance et Statistique
+          </p>
+        </div>
+      </div>
+
+      <p class="mt-3 text-gray-500 dark:text-neutral-500">
+        Entièrement dévoué dans les domaines de Fintech
+      </p>
+
+      <!-- Social Brands -->
+      <div class="mt-3 space-x-1">
+        
+      </div>
+      <!-- End Social Brands -->
+    </div>
+    <!-- End Col -->
+
+    <div class="flex flex-col rounded-xl p-4 md:p-6 bg-white border border-gray-200 dark:bg-neutral-900 dark:border-neutral-700">
+      <div class="flex items-center gap-x-4">
+        <img class="rounded-full size-20 duration-300 hover:scale-150" src="Amis\Aimé.jpg" alt="Avatar">
+        <div class="grow">
+          <h3 class="font-medium text-gray-800 dark:text-neutral-200">
+            Aimé GOHOUEDE
+          </h3>
+          <p class="text-xs uppercase text-gray-500 dark:text-neutral-500">
+            Ingénieur en numérique
+          </p>
+        </div>
+      </div>
+
+      <p class="mt-3 text-gray-500 dark:text-neutral-500">
+        Je fais aussi développeur front-end
+      </p>
+
+      <!-- Social Brands -->
+      <div class="mt-3 space-x-1">
+      
+      </div>
+      <!-- End Social Brands -->
+    </div>
+    <!-- End Col -->
+
+    <div class="flex flex-col rounded-xl p-4 md:p-6 bg-white border border-gray-200 dark:bg-neutral-900 dark:border-neutral-700">
+      <div class="flex items-center gap-x-4">
+        <img class="rounded-full size-20 duration-300 hover:scale-150" src="Amis\Espoir.jfif" alt="Avatar">
+        <div class="grow">
+          <h3 class="font-medium text-gray-800 dark:text-neutral-200">
+            Espoir KOSSOU Zyad
+          </h3>
+          <p class="text-xs uppercase text-gray-500 dark:text-neutral-500">
+            Ingénieur en modélisation Aléatoire et Statistique
+          </p>
+        </div>
+      </div>
+
+      <p class="mt-3 text-gray-500 dark:text-neutral-500">
+        Je suis spécialisé dans l'analyse des prets de crédits et de la prédiction d'évènement
+      </p>
+
+      <!-- Social Brands -->
+      <div class="mt-3 space-x-1">
+        
+      </div>
+      <!-- End Social Brands -->
+    </div>
+    <!-- End Col -->
+
+    <div class="flex flex-col rounded-xl p-4 md:p-6 bg-white border border-gray-200 dark:bg-neutral-900 dark:border-neutral-700">
+      <div class="flex items-center gap-x-4">
+        <img class="rounded-full size-20 duration-300 hover:scale-150" src="Amis\Bill.jpg" alt="Avatar">
+        <div class="grow">
+          <h3 class="font-medium text-gray-800 dark:text-neutral-200">
+            Bill ZOFFOU
+          </h3>
+          <p class="text-xs uppercase text-gray-500 dark:text-neutral-500">
+            Ingénieur en Modélisation aléatoire et statistique
+          </p>
+        </div>
+      </div>
+
+      <p class="mt-3 text-gray-500 dark:text-neutral-500">
+        Je suis spécialisé dans l'analyse des tendances du marché boursier
+      </p>
+
+      <!-- Social Brands -->
+      <div class="mt-3 space-x-1">
+        
+      </div>
+      <!-- End Social Brands -->
+    </div>
+    <!-- End Col -->
+
+    <div class="flex flex-col rounded-xl p-4 md:p-6 bg-white border border-gray-200 dark:bg-neutral-900 dark:border-neutral-700">
+      <div class="flex items-center gap-x-4">
+        <img class="rounded-full size-20 duration-300 hover:scale-150" src="Amis\Colombe.jfif" alt="Avatar">
+        <div class="grow">
+          <h3 class="font-medium text-gray-800 dark:text-neutral-200">
+            Colombe GBAGUIDI
+          </h3>
+          <p class="text-xs uppercase text-gray-500 dark:text-neutral-500">
+            Ingénieure en Statistique et data analysis
+          </p>
+        </div>
+      </div>
+
+      <p class="mt-3 text-gray-500 dark:text-neutral-500">
+        Spécialisée dans l'analyse de pipeline de données
+      </p>
+
+      <!-- Social Brands -->
+      <div class="mt-3 space-x-1">
+        
+      </div>
+      <!-- End Social Brands -->
+    </div>
+    <!-- End Col -->
+
+
+    <div class="flex flex-col rounded-xl p-4 md:p-6 bg-white border border-gray-200 dark:bg-neutral-900 dark:border-neutral-700">
+      <div class="flex items-center gap-x-4">
+        <img class="rounded-full size-20 duration-300 hover:scale-150" src="Amis\Mélène.jfif" alt="Avatar">
+        <div class="grow">
+          <h3 class="font-medium text-gray-800 dark:text-neutral-200">
+          Mélène TONOU
+          </h3>
+          <p class="text-xs uppercase text-gray-500 dark:text-neutral-500">
+            Ingénieure en analyse de donnée IA
+          </p>
+        </div>
+      </div>
+
+      <p class="mt-3 text-gray-500 dark:text-neutral-500">
+        Spécialisée en analyse de donnée avec des modèles d'Intélligence Artificielle
+      </p>
+
+      <!-- Social Brands -->
+      <div class="mt-3 space-x-1">
+        
+      </div>
+      <!-- End Social Brands -->
+    </div>
+
+    <!-- <a class="col-span-full lg:col-span-1 group flex flex-col justify-center text-center rounded-xl p-4 md:p-6 border border-dashed border-gray-200 hover:shadow-sm focus:outline-none focus:shadow-sm dark:border-neutral-700" href="#">
+      <h3 class="text-lg text-gray-800 dark:text-neutral-200">
+        We are hiring!
+      </h3>
+      <div>
+        <span class="inline-flex items-center gap-x-2 text-blue-600 group-hover:text-blue-700 group-focus:text-blue-700 dark:text-blue-500 dark:group-hover:text-blue-400 dark:group-focus:text-blue-400">
+          See all opening positions
+          <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg>
+        </span>
+      </div>
+    </a> -->
+    <!-- End Col -->
+  </div>
+  <!-- End Grid -->
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="text-gray-600 body-font">
+
+
+
+  <div class="max-w-2xl mx-auto text-center mt-10 lg:mt-10">
+    <h2 class="text-2xl font-bold md:text-4xl md:leading-tight dark:text-white">Témoignages</h2>
+  </div>
+
+
+  <div class="container px-5 py-10 mx-auto">
+    <div class="flex flex-wrap -m-4">
+      <div class="p-4 md:w-1/3">
+        <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+          <img class="lg:h-48 md:h-36 w-full object-cover object-center transition duration-300 hover:scale-50 hover:object-fill hover:h-[50%]" src="Amis\Marcellin.jpg" alt="blog">
+          <div class="p-6">
+            
+            <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Marcellin OGOUNGBE</h1>
+            <p class="leading-relaxed mb-3">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+            <div class="flex items-center flex-wrap ">
+              <a class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0">Learn More
+                <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14"></path>
+                  <path d="M12 5l7 7-7 7"></path>
+                </svg>
+              </a>
+              <span class="text-gray-400 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
+                <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>1.2k
+              </span>
+              <span class="text-gray-400 inline-flex items-center leading-none text-sm">
+                <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                  <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                </svg>0
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="p-4 md:w-1/3">
+        <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+          <img class="lg:h-48 md:h-36 w-full object-cover object-center transition duration-300 hover:scale-50 hover:object-fill hover:h-[50%]" src="Amis\Cyrille.jpg" alt="blog">
+          <div class="p-6">
+            
+            <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Cyrille ATTOLOU</h1>
+            <p class="leading-relaxed mb-3">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+            <div class="flex items-center flex-wrap">
+              <a class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0">Learn More
+                <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14"></path>
+                  <path d="M12 5l7 7-7 7"></path>
+                </svg>
+              </a>
+              <span class="text-gray-400 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
+                <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>1K
+              </span>
+              <span class="text-gray-400 inline-flex items-center leading-none text-sm">
+                <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                  <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                </svg>0
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="p-4 md:w-1/3">
+        <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+          <img class="lg:h-48 md:h-36 w-full object-cover object-center transition duration-300 hover:scale-50 hover:object-fill hover:h-[50%]" src="Amis\Hope.jfif" alt="blog">
+          <div class="p-6">
+            
+            <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Hope LANMAYIKPOHOUE</h1>
+            <p class="leading-relaxed mb-3">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+            <div class="flex items-center flex-wrap ">
+              <a class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0">Learn More
+                <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14"></path>
+                  <path d="M12 5l7 7-7 7"></path>
+                </svg>
+              </a>
+              <span class="text-gray-400 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
+                <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>600
+              </span>
+              <span class="text-gray-400 inline-flex items-center leading-none text-sm">
+                <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                  <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                </svg>0
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+<br/><br/>
+
+
+
+
+
+
+
+
+
+
+<div class="max-w-2xl mx-auto text-center mt-[250px] mb-14 lg:mt-10">
+  <h2 class="text-2xl font-bold md:text-4xl md:leading-tight dark:text-white">Gallerie</h2>
+</div>
+
+
+<div class="grid grid-cols-2 md:grid-cols-3 gap-5">
+  <div>
+  <img class="h-auto max-w-full rounded-lg" src="Gallerie\IMG_3540.jpg" alt="Gallery image" />
+  </div>
+  
+  <div>
+  <img class="h-auto max-w-full rounded-lg" src="Gallerie\IMG_3556.jpg" alt="Gallery image" />
+  </div>
+  <div>
+  <img class="h-auto max-w-full rounded-lg" src="Gallerie\IMG_3560.jpg" alt="Gallery image" />
+  </div>
+  <div>
+  <img class="h-auto max-w-full rounded-lg" src="Gallerie\In my Jacket.jpeg" alt="Gallery image" />
+  </div>
+  <div>
+  <img class="h-auto max-w-full rounded-lg" src="Gallerie\WhatsApp Image 2024-10-24 at 22.22.57.jpeg" alt="Gallery image" />
+  </div>
+  <div>
+  <img class="h-auto max-w-full rounded-lg" src="Gallerie\WhatsApp Image 2024-10-24 at 22.23.45.jpeg" alt="Gallery image" />
+  </div>
+  <div>
+  <img class="h-auto max-w-full rounded-lg" src="Gallerie\WhatsApp Image 2024-11-14 at 22.12.14.jpeg" alt="Gallery image" />
+  </div>
+  <div>
+  <img class="h-auto max-w-full rounded-lg" src="Gallerie\WhatsApp Image 2024-11-14 at 22.12.15 (2).jpeg" alt="Gallery image" />
+  </div>
+  <div>
+    <img class="h-auto max-w-full rounded-lg" src="Gallerie\WhatsApp Image 2024-11-14 at 22.12.15.jpeg" alt="Gallery image" />
+    </div>
+    <div>
+      <img class="h-auto max-w-full rounded-lg" src="Gallerie\WhatsApp Image 2024-11-14 at 22.12.18 (4).jpeg" alt="Gallery image" />
+      </div>
+      <div>
+        <img class="h-auto max-w-full rounded-lg" src="Gallerie\WhatsApp Image 2024-11-26 at 21.12.25 (1).jpeg" alt="Gallery image" />
+        </div>
+        <div>
+          <img class="h-auto max-w-full rounded-lg" src="Gallerie\WhatsApp Image 2024-11-26 at 21.12.30.jpeg" alt="Gallery image" />
+          </div>
+          <div>
+            <img class="h-auto max-w-full rounded-lg" src="Gallerie\WhatsApp Image 2024-11-26 at 21.12.31 (2).jpeg" alt="Gallery image" />
+            </div>
+            <div>
+              <img class="h-auto max-w-full rounded-lg" src="Gallerie\WhatsApp Image 2024-11-27 at 16.03.54.jpeg" alt="Gallery image" />
+              </div>
+  </div>
+
+
+
+
+
+
+
+
+</br></br></br></br></br></br></br></br><!-- </br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="pt-16 pb-7 ">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div
+      class="flex flex-col lg:flex-row items-center justify-between gap-6 pb-10 border-b-2 border-gray-200">
+      <a href="https://pagedone.io/" class="py-1.5">
+       Portfolio
+      </a>
+      <div class="flex flex-col lg:flex-row items-center gap-6 lg:gap-12">
+        <ul class="flex flex-col sm:flex-row items-center gap-5 sm:gap-12">
+          <li><a href="jaascript:;"
+              class="text-lg font-normal text-gray-800 transition-all duration-300 hover:text-purple-700 focus-within:text-purple-700 focus-within:outline-0">Assistance</a>
+          </li>
+          <li><a href="jaascript:;"
+              class="text-lg font-normal text-gray-800 transition-all duration-300 hover:text-purple-700 focus-within:text-purple-700 focus-within:outline-0">Blogs</a>
+          </li>
+          <li><a href="jaascript:;"
+              class="text-lg font-normal text-gray-800 transition-all duration-300 hover:text-purple-700 focus-within:text-purple-700 focus-within:outline-0">Support FAQ</a>
+          </li>
+        </ul>
+        <button
+          class="py-3 pr-7 pl-5 rounded-xl flex items-center gap-2 text-base font-semibold text-purple-700 shadow-sm shadow-transparent bg-violet-50 transition-all duration-500 hover:bg-violet-200 focus-within:outline-0 focus-within:bg-violet-200 ">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path
+              d="M11.1675 16.2888L11.7331 15.7231L11.1675 16.2888ZM3.71117 8.83253L3.14549 9.39822L3.14549 9.39822L3.71117 8.83253ZM17.0155 13.9496L17.5812 13.3839L17.5812 13.3839L17.0155 13.9496ZM14.9443 11.8784L14.3787 12.4441L14.3787 12.4441L14.9443 11.8784ZM7.78046 4.71452L7.21477 5.28021L7.21477 5.28021L7.78046 4.71452ZM6.0504 2.98447L6.61609 2.41878L6.61609 2.41878L6.0504 2.98447ZM11.533 11.8784L10.9673 12.4441L10.9673 12.4441L11.533 11.8784ZM7.78046 8.1259L8.34614 7.56021L8.34614 7.56021L7.78046 8.1259ZM7.78046 6.42021L8.34614 6.9859L8.34614 6.9859L7.78046 6.42021ZM13.2387 11.8784L13.8043 12.4441L13.8043 12.4441L13.2387 11.8784ZM3.71118 2.98447L3.14549 2.41878L3.71118 2.98447ZM17.0155 16.2888L17.5812 16.8545L17.5812 16.8545L17.0155 16.2888ZM12.4788 4.30734C12.0397 4.25754 11.6435 4.57306 11.5937 5.01208C11.5439 5.45109 11.8594 5.84735 12.2984 5.89714L12.4788 4.30734ZM14.0745 7.5725C14.1473 8.00829 14.5596 8.30255 14.9954 8.22976C15.4312 8.15697 15.7254 7.74468 15.6526 7.30889L14.0745 7.5725ZM11.5122 6.98575C11.0732 6.93595 10.6769 7.25147 10.6271 7.69048C10.5773 8.1295 10.8928 8.52576 11.3319 8.57555L11.5122 6.98575ZM11.5607 8.78902C11.6335 9.22481 12.0458 9.51908 12.4816 9.44628C12.9174 9.37349 13.2116 8.96121 13.1388 8.52541L11.5607 8.78902ZM13.5861 1.71878C13.1457 1.6833 12.7599 2.01155 12.7244 2.45195C12.689 2.89236 13.0172 3.27813 13.4576 3.31362L13.5861 1.71878ZM16.666 6.35769C16.7246 6.79562 17.1271 7.10315 17.565 7.04458C18.003 6.98601 18.3105 6.58352 18.2519 6.14559L16.666 6.35769ZM11.7331 15.7231L4.27686 8.26685L3.14549 9.39822L10.6018 16.8545L11.7331 15.7231ZM17.5812 13.3839L15.51 11.3127L14.3787 12.4441L16.4498 14.5153L17.5812 13.3839ZM8.34614 4.14884L6.61609 2.41878L5.48472 3.55016L7.21477 5.28021L8.34614 4.14884ZM8.34614 6.9859C9.12957 6.20246 9.12957 4.93227 8.34614 4.14884L7.21477 5.28021C7.37336 5.4388 7.37336 5.69593 7.21477 5.85452L8.34614 6.9859ZM7.21477 5.85452C6.43134 6.63796 6.43134 7.90815 7.21477 8.69158L8.34614 7.56021C8.18755 7.40162 8.18755 7.14449 8.34614 6.9859L7.21477 5.85452ZM12.673 11.3127C12.5144 11.4713 12.2572 11.4713 12.0987 11.3127L10.9673 12.4441C11.7507 13.2275 13.0209 13.2275 13.8043 12.4441L12.673 11.3127ZM15.51 11.3127C14.7266 10.5293 13.4564 10.5293 12.673 11.3127L13.8043 12.4441C13.9629 12.2855 14.2201 12.2855 14.3787 12.4441L15.51 11.3127ZM4.27686 8.26685C2.97438 6.96437 2.97438 4.85264 4.27686 3.55015L3.14549 2.41878C1.21817 4.3461 1.21817 7.4709 3.14549 9.39822L4.27686 8.26685ZM16.4498 15.7231C15.1474 17.0256 13.0356 17.0256 11.7331 15.7231L10.6018 16.8545C12.5291 18.7818 15.6539 18.7818 17.5812 16.8545L16.4498 15.7231ZM17.5812 16.8545C18.5396 15.8961 18.5396 14.3423 17.5812 13.3839L16.4498 14.5153C16.7834 14.8488 16.7834 15.3896 16.4498 15.7231L17.5812 16.8545ZM4.27686 3.55015C4.6104 3.21661 5.15118 3.21661 5.48472 3.55016L6.61609 2.41878C5.65771 1.46041 4.10387 1.4604 3.14549 2.41878L4.27686 3.55015ZM12.0987 11.3127L8.34614 7.56021L7.21477 8.69158L10.9673 12.4441L12.0987 11.3127ZM12.2984 5.89714C12.5824 5.92936 12.9837 6.03459 13.3286 6.28252C13.6515 6.51464 13.9614 6.89509 14.0745 7.5725L15.6526 7.30889C15.4671 6.19837 14.9147 5.45216 14.2624 4.98331C13.6322 4.53028 12.9452 4.36025 12.4788 4.30734L12.2984 5.89714ZM11.3319 8.57555C11.3813 8.58116 11.4424 8.60035 11.4825 8.62918C11.4985 8.64068 11.5106 8.65312 11.521 8.66953C11.531 8.68537 11.5492 8.72035 11.5607 8.78902L13.1388 8.52541C13.0467 7.97375 12.7638 7.57971 12.4163 7.32997C12.0909 7.09604 11.7441 7.01205 11.5122 6.98575L11.3319 8.57555ZM13.4576 3.31362C14.4328 3.39219 16.368 4.12904 16.666 6.35769L18.2519 6.14559C17.8106 2.84549 14.9275 1.82686 13.5861 1.71878L13.4576 3.31362Z"
+              fill="currentColor" />
+          </svg>Contact Us
+        </button>
+      </div>
+    </div>
+    <div class="pt-7 flex flex-col-reverse min-[520px]:flex-row items-center justify-between gap-6">
+      <span class="text-sm font-normal text-gray-500 focus-within:outline-0">©<a href="https://pagedone.io/">Portfolio</a>2024, All rights reserved.</span>
+      <ul class="flex items-center gap-9">
+        <li><a href="jaascript:;"
+            class="text-sm font-normal text-gray-500 transition-all duration-300 hover:text-purple-700 focus-within:text-purple-700 focus-within:outline-0">Terms</a>
+        </li>
+        <li><a href="jaascript:;"
+            class="text-sm font-normal text-gray-500 transition-all duration-300 hover:text-purple-700 focus-within:text-purple-700 focus-within:outline-0">Privacy</a>
+        </li>
+       
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<!-- ========== END MAIN CONTENT ========== -->
+
+<!-- JS Implementing Plugins -->
+
+<!-- JS PLUGINS -->
+<!-- Required plugins -->
+<script src="Code.js" ></script>
+
+<script src="index.js"></script>
+
+<!-- JS THIRD PARTY PLUGINS -->
+<!-- Google Analytics. Global site tag (gtag.js) -->
+<script async src="js.js"></script>
+<script>
+ 
+</script>
+
+</body>
+</html>
