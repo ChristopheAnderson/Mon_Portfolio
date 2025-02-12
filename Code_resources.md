@@ -36,6 +36,7 @@ git config --global user.name "ChristopheAnderson"
 git config --global user.email "christophewavoeke18@gmail.com"
 
 git remote remove https://github.com/ChristopheAnderson/Mon_Portfolio.git
+git remote add origin https://github.com/ChristopheAnderson/Web.git
 
 git add .
 git commit -m "nj"
