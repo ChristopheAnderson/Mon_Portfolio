@@ -10,6 +10,7 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.24/dist/full.min.css" rel="stylesheet" type="text/css" />
   <script src="cdn.tailwindcss.js"></script>
+  <script src="preline.js"></script>
   <!--<script src="https://cdn.tailwindcss.com"></script>-->
   <!--<script src="https://unpkg.com/@tailwindcss/browser@4"></script>-->
  
@@ -47,8 +48,8 @@
         <li class="flex">
           <a rel="noopener noreferrer" href="" class="flex items-center px-4 -mb-1 text-white hover:text-gray-200">Blog</a>
         </li>
-        <li class="flex">
-          <a rel="noopener noreferrer" href="" class="flex items-center px-4 -mb-1 text-white hover:text-gray-200"> Contact</a>
+        <li class="flex cursor-pointer" aria-haspopup="dialog" aria-expanded="false" aria-controls="hs-notifications" data-hs-overlay="#hs-notifications">
+          <span rel="noopener noreferrer" href="" class="flex items-center px-4 -mb-1 text-white hover:text-gray-200"> Contact</span>
         </li>
         <li class="flex">
           <a rel="noopener noreferrer" href="assistance.html" class="flex items-center px-4 -mb-1 text-white hover:text-gray-200">Assistance</a>
@@ -64,42 +65,14 @@
   
       <!-- Search and Login (Desktop) -->
       <div class="flex items-center space-x-4">
-        <!-- Search Bar -->
         
-  
-        <!-- Login Button -->
-        <!-- <button type="button" class=" relative lg:right-[25px] hidden px-6 py-2 font-semibold rounded lg:block bg-white text-blue-600 hover:bg-gray-100">
-            Log in
-        </button> -->
 
 
         <div class="dropdown relative">
           <label tabindex="0" class="normal-case ml-2 cursor-grabbing">
               <img src="avatar\fun-3d-illustration-american-referee.jpg" class=" relative -top-[6px] w-12 h-12 rounded-full transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300" alt="" >
           </label>
-          <!-- <div tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-300 rounded-box w-52 text-center">
-              <div class="flex flex-col items-center">
-                  <div class="avatar">
-                      <div class="w-24 h-24 rounded-full overflow-hidden">
-                          <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" class="w-full h-full object-cover" />
-                      </div>
-                  </div>
-                  <div class="mb-1">Name</div>
-                  <div class="badge badge-primary mb-1">Admin</div>
-              </div>
-              <div class="divider"></div>
-              <div class="block mb-1">
-                  <a href="" class="block">Панель управления</a>
-              </div>
-              <div class="block mb-1">
-                  <a class="block">Игровые аккаунты</a>
-              </div>
-              <div class="block">
-                  <a href="" method="post" class="block">Выход</a>
-              </div>
-          </div> -->
-  <!-- component -->
-  
+          
           <div tabindex="0" class="relative -left-[260px] dropdown-content z-[1] menu p-2 drop-shadow-sm bg-white text-blue-500 border-blue-600 border-2 border-solid rounded-lg w-72">      
               <div class="p-3 divide-y divide-blue-400 divide-neutral">
                   <div class="flex space-x-4 items-center p-4">
@@ -170,6 +143,8 @@
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
         </svg>
       </button>
+
+      
     </div>
   </header>
 
@@ -1411,83 +1386,86 @@ Durant mes études, j’ai eu de nombreuses idées de projets web que j’ai com
 
 
 
-<div class="my-6">
-            <div class="grid sm:grid-cols-2 items-center gap-16 p-8 mx-auto max-w-4xl bg-white shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-md text-[#333] font-[sans-serif]">
-                <div>
-                    <h1 class="text-3xl font-extrabold text-blue-600">Nous contacter</h1>
-                    <p class="text-sm text-gray-400 mt-3">Si vous avez des questions, des préoccupations ou que vous souhaitez en savoir plus sur nous, n’hésitez pas à nous contacter en remplissant le formulaire ou via le lien de notre compte sur les réseaux sociaux.</p>
-                    <div class="mt-12">
-                        <h2 class="text-lg font-extrabold text-blue-600">Email</h2>
-                        <ul class="mt-3">
-                            <li class="flex items-center">
-                                <div class="bg-[#e6e6e6cf] h-10 w-10 rounded-full flex items-center justify-center shrink-0">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill='#007bff'
-                                        viewBox="0 0 479.058 479.058">
-                                        <path
-                                            d="M434.146 59.882H44.912C20.146 59.882 0 80.028 0 104.794v269.47c0 24.766 20.146 44.912 44.912 44.912h389.234c24.766 0 44.912-20.146 44.912-44.912v-269.47c0-24.766-20.146-44.912-44.912-44.912zm0 29.941c2.034 0 3.969.422 5.738 1.159L239.529 264.631 39.173 90.982a14.902 14.902 0 0 1 5.738-1.159zm0 299.411H44.912c-8.26 0-14.971-6.71-14.971-14.971V122.615l199.778 173.141c2.822 2.441 6.316 3.655 9.81 3.655s6.988-1.213 9.81-3.655l199.778-173.141v251.649c-.001 8.26-6.711 14.97-14.971 14.97z"
-                                            data-original="#000000" />
-                                    </svg>
-                                </div>
-                                <a target="blank" href="javascript:void(0)" class="text-[#007bff] text-sm ml-3">
-                                    <small class="block">Mail</small>
-                                    <strong>christophewavoeke18@gmail.com</strong>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="mt-12">
-                        <h2 class="text-lg font-extrabold text-blue-600">Réseaux sociaux</h2>
-                        <ul class="flex mt-3 space-x-4">
-                            <li class="bg-[#e6e6e6cf] h-10 w-10 rounded-full flex items-center justify-center shrink-0">
-                                <a href="javascript:void(0)">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill='#007bff'
-                                        viewBox="0 0 24 24">
-                                        <path
-                                            d="M6.812 13.937H9.33v9.312c0 .414.335.75.75.75l4.007.001a.75.75 0 0 0 .75-.75v-9.312h2.387a.75.75 0 0 0 .744-.657l.498-4a.75.75 0 0 0-.744-.843h-2.885c.113-2.471-.435-3.202 1.172-3.202 1.088-.13 2.804.421 2.804-.75V.909a.75.75 0 0 0-.648-.743A26.926 26.926 0 0 0 15.071 0c-7.01 0-5.567 7.772-5.74 8.437H6.812a.75.75 0 0 0-.75.75v4c0 .414.336.75.75.75zm.75-3.999h2.518a.75.75 0 0 0 .75-.75V6.037c0-2.883 1.545-4.536 4.24-4.536.878 0 1.686.043 2.242.087v2.149c-.402.205-3.976-.884-3.976 2.697v2.755c0 .414.336.75.75.75h2.786l-.312 2.5h-2.474a.75.75 0 0 0-.75.75V22.5h-2.505v-9.312a.75.75 0 0 0-.75-.75H7.562z"
-                                            data-original="#000000" />
-                                    </svg>
-                                </a>
-                            </li>
-                            <li class="bg-[#e6e6e6cf] h-10 w-10 rounded-full flex items-center justify-center shrink-0">
-                                <a href="javascript:void(0)">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill='#007bff'
-                                        viewBox="0 0 511 512">
-                                        <path
-                                            d="M111.898 160.664H15.5c-8.285 0-15 6.719-15 15V497c0 8.285 6.715 15 15 15h96.398c8.286 0 15-6.715 15-15V175.664c0-8.281-6.714-15-15-15zM96.898 482H30.5V190.664h66.398zM63.703 0C28.852 0 .5 28.352.5 63.195c0 34.852 28.352 63.2 63.203 63.2 34.848 0 63.195-28.352 63.195-63.2C126.898 28.352 98.551 0 63.703 0zm0 96.395c-18.308 0-33.203-14.891-33.203-33.2C30.5 44.891 45.395 30 63.703 30c18.305 0 33.195 14.89 33.195 33.195 0 18.309-14.89 33.2-33.195 33.2zm289.207 62.148c-22.8 0-45.273 5.496-65.398 15.777-.684-7.652-7.11-13.656-14.942-13.656h-96.406c-8.281 0-15 6.719-15 15V497c0 8.285 6.719 15 15 15h96.406c8.285 0 15-6.715 15-15V320.266c0-22.735 18.5-41.23 41.235-41.23 22.734 0 41.226 18.495 41.226 41.23V497c0 8.285 6.719 15 15 15h96.403c8.285 0 15-6.715 15-15V302.066c0-79.14-64.383-143.523-143.524-143.523zM466.434 482h-66.399V320.266c0-39.278-31.953-71.23-71.226-71.23-39.282 0-71.239 31.952-71.239 71.23V482h-66.402V190.664h66.402v11.082c0 5.77 3.309 11.027 8.512 13.524a15.01 15.01 0 0 0 15.875-1.82c20.313-16.294 44.852-24.907 70.953-24.907 62.598 0 113.524 50.926 113.524 113.523zm0 0"
-                                            data-original="#000000" />
-                                    </svg>
-                                </a>
-                            </li>
-                            <li class="bg-[#e6e6e6cf] h-10 w-10 rounded-full flex items-center justify-center shrink-0">
-                                <a href="javascript:void(0)">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill='#007bff'
-                                        viewBox="0 0 24 24">
-                                        <path
-                                            d="M12 9.3a2.7 2.7 0 1 0 0 5.4 2.7 2.7 0 0 0 0-5.4Zm0-1.8a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9Zm5.85-.225a1.125 1.125 0 1 1-2.25 0 1.125 1.125 0 0 1 2.25 0ZM12 4.8c-2.227 0-2.59.006-3.626.052-.706.034-1.18.128-1.618.299a2.59 2.59 0 0 0-.972.633 2.601 2.601 0 0 0-.634.972c-.17.44-.265.913-.298 1.618C4.805 9.367 4.8 9.714 4.8 12c0 2.227.006 2.59.052 3.626.034.705.128 1.18.298 1.617.153.392.333.674.632.972.303.303.585.484.972.633.445.172.918.267 1.62.3.993.047 1.34.052 3.626.052 2.227 0 2.59-.006 3.626-.052.704-.034 1.178-.128 1.617-.298.39-.152.674-.333.972-.632.304-.303.485-.585.634-.972.171-.444.266-.918.299-1.62.047-.993.052-1.34.052-3.626 0-2.227-.006-2.59-.052-3.626-.034-.704-.128-1.18-.299-1.618a2.619 2.619 0 0 0-.633-.972 2.595 2.595 0 0 0-.972-.634c-.44-.17-.914-.265-1.618-.298-.993-.047-1.34-.052-3.626-.052ZM12 3c2.445 0 2.75.009 3.71.054.958.045 1.61.195 2.185.419A4.388 4.388 0 0 1 19.49 4.51c.457.45.812.994 1.038 1.595.222.573.373 1.227.418 2.185.042.96.054 1.265.054 3.71 0 2.445-.009 2.75-.054 3.71-.045.958-.196 1.61-.419 2.185a4.395 4.395 0 0 1-1.037 1.595 4.44 4.44 0 0 1-1.595 1.038c-.573.222-1.227.373-2.185.418-.96.042-1.265.054-3.71.054-2.445 0-2.75-.009-3.71-.054-.958-.045-1.61-.196-2.185-.419A4.402 4.402 0 0 1 4.51 19.49a4.414 4.414 0 0 1-1.037-1.595c-.224-.573-.374-1.227-.419-2.185C3.012 14.75 3 14.445 3 12c0-2.445.009-2.75.054-3.71s.195-1.61.419-2.185A4.392 4.392 0 0 1 4.51 4.51c.45-.458.994-.812 1.595-1.037.574-.224 1.226-.374 2.185-.419C9.25 3.012 9.555 3 12 3Z">
-                                        </path>
-                                    </svg>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+
+<div id="hs-notifications" class="w-full hs-overlay hidden size-full fixed top-14 start-0 z-[80] overflow-x-hidden overflow-y-auto" role="dialog" tabindex="-1" aria-labelledby="hs-notifications-label">
+  <div class="hs-overlay-open:mt-7 hs-overlay-open:opacity-100 hs-overlay-open:duration-500 mt-0 opacity-0 ease-out transition-all sm:max-w-4xl sm:w-full m-3 sm:mx-auto">
+    <div class="relative flex flex-col bg-white border shadow-sm rounded-xl overflow-hidden dark:bg-neutral-900 dark:border-neutral-800">
+      <div class="absolute top-2 end-2">
+        <button type="button" class="size-8 inline-flex justify-center items-center gap-x-2 rounded-full border border-transparent bg-gray-100 text-gray-800 hover:bg-gray-200 focus:outline-none focus:bg-gray-200 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-700 dark:hover:bg-neutral-600 dark:text-neutral-400 dark:focus:bg-neutral-600" aria-label="" data-hs-overlay="#hs-notifications">
+          <span class="sr-only">Close</span>
+          <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        </button>
+      </div>
+
+
+
+
+
+
+
+      <section class="py-6 dark:bg-gray-100 dark:text-gray-900">
+        <div class="grid max-w-6xl grid-cols-1 items-center mx-auto lg:px-8 md:grid-cols-2 md:divide-x">
+          <div class="md:py-0 md:px-6">
+            <h1 class="text-4xl font-bold mb-2 text-blue-600">Contactez-nous</h1>
+            <p class="pt-2 pb-4">Remplissez le formulaire pour commencer la conversation.</p>
+            <div class="space-y-4">
+              <p class="flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="text-blue-500 w-5 h-5 mr-2 sm:mr-6">
+                  <path d="M12 2C6.477 2 2 6.477 2 12c0 1.993.58 3.85 1.577 5.42L2 22l4.693-1.554A9.935 9.935 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18a7.944 7.944 0 01-4.28-1.248l-.307-.197-2.785.923.921-2.715-.201-.312A8 8 0 1120 12c0 4.418-3.582 8-8 8zm3.43-5.98c-.195-.098-1.153-.57-1.332-.634-.18-.064-.312-.098-.444.098-.133.195-.51.634-.625.766-.115.133-.23.146-.425.049-1.153-.57-1.91-1.016-2.676-2.24-.202-.313.202-.29.577-.97.064-.13.033-.24-.016-.34-.049-.098-.443-1.07-.606-1.464-.16-.388-.323-.336-.444-.343-.115-.006-.247-.007-.38-.007a.732.732 0 00-.527.244c-.18.196-.69.677-.69 1.65s.707 1.915.807 2.049c.098.13 1.39 2.12 3.368 2.973 1.237.533 1.723.577 2.343.488.38-.056 1.153-.47 1.316-.923.163-.454.163-.844.115-.923-.05-.08-.18-.13-.38-.228z"></path>
+              </svg>
               
-                <form class="ml-auo space-y-4">
-                    <input type='text' placeholder='Name'
-                        class="w-full rounded-md py-2.5 px-4 border text-sm outline-[#007bff]" />
-                    <input type='email' placeholder='Email'
-                        class="w-full rounded-md py-2.5 px-4 border text-sm outline-[#007bff]" />
-                    <input type='text' placeholder='Subject'
-                        class="w-full rounded-md py-2.5 px-4 border text-sm outline-[#007bff]" />
-                    <textarea placeholder='Message' rows="6"
-                        class="w-full rounded-md px-4 border text-sm pt-2.5 outline-[#007bff]"></textarea>
-                    <button type='button'
-                        class="text-white bg-[#007bff] hover:bg-blue-600 font-semibold rounded-md text-sm px-4 py-2.5 w-full">Envoyer</button>
-                </form>
+                <span>+229 0166818376</span>
+              </p>
+              <p class="flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="text-blue-500 w-5 h-5 mr-2 sm:mr-6">
+                  <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
+                </svg>
+                <span>+229 0140177774</span>
+              </p>
+
+              <p class="flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="text-blue-500 w-5 h-5 mr-2 sm:mr-6">
+                  <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.28c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75 1.75.78 1.75 1.75-.78 1.75-1.75 1.75zm13.5 11.28h-3v-5.5c0-1.32-.03-3-1.83-3s-2.11 1.43-2.11 2.91v5.59h-3v-10h2.88v1.36h.04c.4-.76 1.38-1.56 2.84-1.56 3.04 0 3.6 2 3.6 4.59v5.61z"/>
+              </svg>
+              
+                <span><a href="www.linkedin.com/in/christophe-wavoeke-ba0b04249" > Christophe WAVOEKE </a></span>
+              </p>
+
+              <p class="flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="text-blue-500 w-5 h-5 mr-2 sm:mr-6">
+                  <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                  <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                </svg>
+                <span>christophewavoeke18@gmail.com</span>
+              </p>
             </div>
+          </div>
+          <form novalidate="" class="flex flex-col py-6 space-y-6 md:py-0 md:px-6">
+            <label class="block">
+              <span class="mb-1">Full name</span>
+              <input type="text" placeholder="Christophe Wavoeke" class="block w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:dark:ring-violet-600 dark:bg-gray-100">
+            </label>
+            <label class="block">
+              <span class="mb-1">Email address</span>
+              <input type="email" placeholder="exemple@gmail.com" class="block w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:dark:ring-violet-600 dark:bg-gray-100">
+            </label>
+            <label class="block">
+              <span class="mb-1">Message</span>
+              <textarea rows="3" class="h-40 resize-none p-4 block w-full rounded-md focus:ring focus:ring-opacity-75 focus:dark:ring-violet-600 dark:bg-gray-100"></textarea>
+            </label>
+            <button type="button" class="bg-blue-600 text-white py-3 font-semibold rounded dark:bg-gray-800 dark:text-gray-100">Basic</button>
+          </form>
         </div>
+      </section>
 
 
+
+
+
+
+    </div>
+  </div>
+</div>
 
 
 
@@ -1528,7 +1506,7 @@ Durant mes études, j’ai eu de nombreuses idées de projets web que j’ai com
       </a>
       <div class="flex flex-col lg:flex-row items-center gap-6 lg:gap-12">
         <ul class="flex flex-col sm:flex-row items-center gap-5 sm:gap-12">
-          <li><a href="jaascript:;"
+          <li><a href="assistance.html"
               class="text-lg font-normal text-gray-800 transition-all duration-300 hover:text-purple-700 focus-within:text-purple-700 focus-within:outline-0">Assistance</a>
           </li>
           <li><a href="jaascript:;"
@@ -1539,7 +1517,7 @@ Durant mes études, j’ai eu de nombreuses idées de projets web que j’ai com
           </li>
         </ul>
         <button
-          class="py-3 pr-7 pl-5 rounded-xl flex items-center gap-2 text-base font-semibold text-purple-700 shadow-sm shadow-transparent bg-violet-50 transition-all duration-500 hover:bg-violet-200 focus-within:outline-0 focus-within:bg-violet-200 ">
+        aria-haspopup="dialog" aria-expanded="false" aria-controls="hs-notifications" data-hs-overlay="#hs-notifications" class="py-3 pr-7 pl-5 rounded-xl flex items-center gap-2 text-base font-semibold text-purple-700 shadow-sm shadow-transparent bg-violet-50 transition-all duration-500 hover:bg-violet-200 focus-within:outline-0 focus-within:bg-violet-200 ">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
             <path
               d="M11.1675 16.2888L11.7331 15.7231L11.1675 16.2888ZM3.71117 8.83253L3.14549 9.39822L3.14549 9.39822L3.71117 8.83253ZM17.0155 13.9496L17.5812 13.3839L17.5812 13.3839L17.0155 13.9496ZM14.9443 11.8784L14.3787 12.4441L14.3787 12.4441L14.9443 11.8784ZM7.78046 4.71452L7.21477 5.28021L7.21477 5.28021L7.78046 4.71452ZM6.0504 2.98447L6.61609 2.41878L6.61609 2.41878L6.0504 2.98447ZM11.533 11.8784L10.9673 12.4441L10.9673 12.4441L11.533 11.8784ZM7.78046 8.1259L8.34614 7.56021L8.34614 7.56021L7.78046 8.1259ZM7.78046 6.42021L8.34614 6.9859L8.34614 6.9859L7.78046 6.42021ZM13.2387 11.8784L13.8043 12.4441L13.8043 12.4441L13.2387 11.8784ZM3.71118 2.98447L3.14549 2.41878L3.71118 2.98447ZM17.0155 16.2888L17.5812 16.8545L17.5812 16.8545L17.0155 16.2888ZM12.4788 4.30734C12.0397 4.25754 11.6435 4.57306 11.5937 5.01208C11.5439 5.45109 11.8594 5.84735 12.2984 5.89714L12.4788 4.30734ZM14.0745 7.5725C14.1473 8.00829 14.5596 8.30255 14.9954 8.22976C15.4312 8.15697 15.7254 7.74468 15.6526 7.30889L14.0745 7.5725ZM11.5122 6.98575C11.0732 6.93595 10.6769 7.25147 10.6271 7.69048C10.5773 8.1295 10.8928 8.52576 11.3319 8.57555L11.5122 6.98575ZM11.5607 8.78902C11.6335 9.22481 12.0458 9.51908 12.4816 9.44628C12.9174 9.37349 13.2116 8.96121 13.1388 8.52541L11.5607 8.78902ZM13.5861 1.71878C13.1457 1.6833 12.7599 2.01155 12.7244 2.45195C12.689 2.89236 13.0172 3.27813 13.4576 3.31362L13.5861 1.71878ZM16.666 6.35769C16.7246 6.79562 17.1271 7.10315 17.565 7.04458C18.003 6.98601 18.3105 6.58352 18.2519 6.14559L16.666 6.35769ZM11.7331 15.7231L4.27686 8.26685L3.14549 9.39822L10.6018 16.8545L11.7331 15.7231ZM17.5812 13.3839L15.51 11.3127L14.3787 12.4441L16.4498 14.5153L17.5812 13.3839ZM8.34614 4.14884L6.61609 2.41878L5.48472 3.55016L7.21477 5.28021L8.34614 4.14884ZM8.34614 6.9859C9.12957 6.20246 9.12957 4.93227 8.34614 4.14884L7.21477 5.28021C7.37336 5.4388 7.37336 5.69593 7.21477 5.85452L8.34614 6.9859ZM7.21477 5.85452C6.43134 6.63796 6.43134 7.90815 7.21477 8.69158L8.34614 7.56021C8.18755 7.40162 8.18755 7.14449 8.34614 6.9859L7.21477 5.85452ZM12.673 11.3127C12.5144 11.4713 12.2572 11.4713 12.0987 11.3127L10.9673 12.4441C11.7507 13.2275 13.0209 13.2275 13.8043 12.4441L12.673 11.3127ZM15.51 11.3127C14.7266 10.5293 13.4564 10.5293 12.673 11.3127L13.8043 12.4441C13.9629 12.2855 14.2201 12.2855 14.3787 12.4441L15.51 11.3127ZM4.27686 8.26685C2.97438 6.96437 2.97438 4.85264 4.27686 3.55015L3.14549 2.41878C1.21817 4.3461 1.21817 7.4709 3.14549 9.39822L4.27686 8.26685ZM16.4498 15.7231C15.1474 17.0256 13.0356 17.0256 11.7331 15.7231L10.6018 16.8545C12.5291 18.7818 15.6539 18.7818 17.5812 16.8545L16.4498 15.7231ZM17.5812 16.8545C18.5396 15.8961 18.5396 14.3423 17.5812 13.3839L16.4498 14.5153C16.7834 14.8488 16.7834 15.3896 16.4498 15.7231L17.5812 16.8545ZM4.27686 3.55015C4.6104 3.21661 5.15118 3.21661 5.48472 3.55016L6.61609 2.41878C5.65771 1.46041 4.10387 1.4604 3.14549 2.41878L4.27686 3.55015ZM12.0987 11.3127L8.34614 7.56021L7.21477 8.69158L10.9673 12.4441L12.0987 11.3127ZM12.2984 5.89714C12.5824 5.92936 12.9837 6.03459 13.3286 6.28252C13.6515 6.51464 13.9614 6.89509 14.0745 7.5725L15.6526 7.30889C15.4671 6.19837 14.9147 5.45216 14.2624 4.98331C13.6322 4.53028 12.9452 4.36025 12.4788 4.30734L12.2984 5.89714ZM11.3319 8.57555C11.3813 8.58116 11.4424 8.60035 11.4825 8.62918C11.4985 8.64068 11.5106 8.65312 11.521 8.66953C11.531 8.68537 11.5492 8.72035 11.5607 8.78902L13.1388 8.52541C13.0467 7.97375 12.7638 7.57971 12.4163 7.32997C12.0909 7.09604 11.7441 7.01205 11.5122 6.98575L11.3319 8.57555ZM13.4576 3.31362C14.4328 3.39219 16.368 4.12904 16.666 6.35769L18.2519 6.14559C17.8106 2.84549 14.9275 1.82686 13.5861 1.71878L13.4576 3.31362Z"
