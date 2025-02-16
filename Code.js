@@ -107,6 +107,31 @@ let currentIndex = 0;
 
 
 
+    // Accéder aux éléments du DOM
+    const openSidebarBtn = document.getElementById("openSidebar");
+    const closeSidebarBtn = document.getElementById("closeSidebar");
+    const sidebar = document.getElementById("sidebar");
+
+
+    // Fonction pour ouvrir la sidebar
+    openSidebarBtn.addEventListener("click", () => {
+    sidebar.classList.remove("translate-x-full");
+    });
+
+    // Fonction pour fermer la sidebar
+    closeSidebarBtn.addEventListener("click", () => {
+    sidebar.classList.add("translate-x-full");
+    });
+
+    // Fermer la sidebar si un clic est effectué en dehors de la sidebar
+    document.addEventListener("click", (event) => {
+    if (!sidebar.contains(event.target) && !openSidebarBtn.contains(event.target)) {
+        sidebar.classList.add("translate-x-full");
+        overlay.classList.add("hidden");
+    }
+    });
+
+
 
 
   
@@ -151,9 +176,6 @@ var G = new gallery();
   });
 
   // run G.load() if new data loaded with ajax
-
-
-  
 
 
 
