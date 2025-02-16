@@ -2,3 +2,19 @@
     opacity: 0;
     transition: opacity 2s ease-in-out;
 }
+/* Ajout de la transition pour une animation fluide */
+.sidebar {
+    transition: transform 0.3s ease-in-out;
+  }
+
+
+  /* styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Inter:wght@300;600&display=swap');
+
+.font-poppins {
+  font-family: 'Poppins', sans-serif;
+}
+
+.font-inter {
+  font-family: 'Inter', sans-serif;
+}
