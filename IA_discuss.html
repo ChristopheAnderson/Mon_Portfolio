@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My AI Assistant</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8fafc;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #6b73ff 0%, #000dff 100%);
+        }
+        
+        .chat-bubble {
+            border-radius: 20px;
+            position: relative;
+            max-width: 80%;
+        }
+        
+        .user-bubble {
+            background-color: #3b82f6;
+            color: white;
+            border-bottom-right-radius: 5px;
+            margin-left: auto;
+        }
+        
+        .ai-bubble {
+            background-color: #f1f5f9;
+            color: #1e293b;
+            border-bottom-left-radius: 5px;
+        }
+        
+        .typing-indicator {
+            display: inline-flex;
+            align-items: center;
+        }
+        
+        .typing-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #9ca3af;
+            border-radius: 50%;
+            margin: 0 2px;
+            animation: typing 1.5s infinite ease-in-out;
+        }
+        
+        .typing-dot:nth-child(1) {
+            animation-delay: 0s;
+        }
+        
+        .typing-dot:nth-child(2) {
+            animation-delay: 0.3s;
+        }
+        
+        .typing-dot:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+        
+        @keyframes typing {
+            0%, 60%, 100% {
+                transform: translateY(0);
+            }
+            30% {
+                transform: translateY(-5px);
+            }
+        }
+        
+        .document-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .document-card {
+            transition: all 0.3s ease;
+        }
+        
+        .sidebar-item:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(59, 130, 246, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(59, 130, 246, 0);
+            }
+        }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <div class="flex h-screen overflow-hidden">
+        <!-- Sidebar -->
+        <div class="hidden md:flex md:flex-shrink-0">
+            <div class="flex flex-col w-64 gradient-bg text-white">
+                <div class="flex items-center justify-center h-16 px-4 border-b border-blue-400">
+                    <div class="flex items-center">
+                        <i class="fas fa-robot text-2xl mr-2"></i>
+                        <span class="text-xl font-semibold">Mon IA</span>
+                    </div>
+                </div>
+                <div class="flex flex-col flex-grow overflow-y-auto">
+                    <div class="flex flex-col space-y-1 px-4 py-4">
+                        <a href="#" class="sidebar-item flex items-center px-4 py-3 rounded-lg text-white bg-blue-700">
+                            <i class="fas fa-comment-dots mr-3"></i>
+                            <span>conversation</span>
+                        </a>
+                        <a href="#" class="sidebar-item flex items-center px-4 py-3 rounded-lg text-white hover:bg-blue-600">
+                            <i class="fas fa-user mr-3"></i>
+                            <span>Profil</span>
+                        </a>
+                        <a href="#" class="sidebar-item flex items-center px-4 py-3 rounded-lg text-white hover:bg-blue-600">
+                            <i class="fas fa-file-upload mr-3"></i>
+                            <span>Documents</span>
+                        </a>
+                        <a href="#" class="sidebar-item flex items-center px-4 py-3 rounded-lg text-white hover:bg-blue-600">
+                            <i class="fas fa-cog mr-3"></i>
+                            <span>Paramètres</span>
+                        </a>
+                    </div>
+                    
+                    <div class="px-4 py-4 mt-auto">
+                        <div class="bg-blue-700 rounded-lg p-4">
+                            <div class="flex items-center">
+                                <div class="relative">
+                                    <img class="h-10 w-10 rounded-full" src="Gallerie/In my Jacket.jpeg" alt="what">
+                                    <span class="absolute bottom-0 right-0 block h-3 w-3 rounded-full bg-green-500 ring-2 ring-white"></span>
+                                </div>
+                                <div class="ml-3">
+                                    <p class="text-sm font-medium">Vous</p>
+                                    <p class="text-xs text-blue-200">En ligne</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile sidebar -->
+        <div class="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 z-10">
+            <div class="flex justify-around">
+                <a href="#" class="flex flex-col items-center justify-center p-3 text-blue-600">
+                    <i class="fas fa-comment-dots text-xl"></i>
+                    <span class="text-xs mt-1">conver..</span>
+                </a>
+                <a href="#" class="flex flex-col items-center justify-center p-3 text-gray-500">
+                    <i class="fas fa-user text-xl"></i>
+                    <span class="text-xs mt-1">Profil</span>
+                </a>
+                <a href="#" class="flex flex-col items-center justify-center p-3 text-gray-500">
+                    <i class="fas fa-file-upload text-xl"></i>
+                    <span class="text-xs mt-1">Docs..</span>
+                </a>
+                <a href="#" class="flex flex-col items-center justify-center p-3 text-gray-500">
+                    <i class="fas fa-cog text-xl"></i>
+                    <span class="text-xs mt-1">Para..</span>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Main content -->
+        <div class="flex flex-col flex-1 overflow-hidden">
+            <!-- Top navigation -->
+            <div class="flex items-center justify-between h-16 px-4 bg-white border-b border-gray-200">
+                <div class="flex items-center">
+                    <button class="md:hidden text-gray-500 focus:outline-none mr-2">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h1 class="text-lg font-semibold text-gray-800">Mon assistant IA</h1>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button class="p-2 rounded-full text-gray-500 hover:text-gray-700 hover:bg-gray-100 focus:outline-none">
+                        <i class="fas fa-bell"></i>
+                    </button>
+                    <div class="relative">
+                        <button class="flex items-center focus:outline-none">
+                            <img class="h-8 w-8 rounded-full" src="Gallerie/In my Jacket.jpeg" alt="">
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Main chat area -->
+            <div class="flex flex-col flex-1 overflow-hidden">
+                <div class="flex-1 overflow-y-auto p-4" id="chat-container">
+                    <!-- Welcome message -->
+                    <div class="flex mb-6">
+                        <div class="flex-shrink-0 mr-3">
+                            <img class="h-10 w-10 rounded-full" src="Gallerie/In my Jacket.jpeg" alt="AI Assistant">
+                        </div>
+                        <div>
+                            <div class="ai-bubble chat-bubble px-4 py-3 inline-block">
+                                <p class="font-medium">Salut ! je suis l'assistant IA de Mr Christophe</p>
+                                <p class="mt-1">Je peux répondre à des questions lui concernant ou sur tout autre sujet à partir des documents que vous téléchargez. Comment puis-je vous aider aujourd'hui ?</p>
+                            </div>
+                            <div class="flex space-x-2 mt-2">
+                                <button class="suggestion-btn bg-gray-100 hover:bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm">
+                                    Comment puis-je vous aider ?
+                                </button>
+                                <button class="suggestion-btn bg-gray-100 hover:bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm">
+                                    Je vous suis 
+                                </button>
+                                <button class="suggestion-btn bg-gray-100 hover:bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm">
+                                    ........
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Sample conversation -->
+                    <div class="flex justify-end mb-6">
+                        <div class="user-bubble chat-bubble px-4 py-3 inline-block">
+                            Pouvez-vous me parler de votre parcours professionnel ?
+                        </div>
+                    </div>
+                    
+                    <div class="flex mb-6">
+                        <div class="flex-shrink-0 mr-3">
+                            <img class="h-10 w-10 rounded-full" src="Gallerie/In my Jacket.jpeg" alt="AI Assistant">
+                        </div>
+                        <div>
+                            <div class="ai-bubble chat-bubble px-4 py-3 inline-block">
+                                <p>D'après le CV que vous avez téléchargé, vous avez 5 ans d'expérience en développement web, avec une expertise dans :"</p>
+                                <ul class="list-disc pl-5 mt-2 space-y-1">
+                                    <li>JavaScript frameworks (React, Vue, Angular)</li>
+                                    <li>Backend development (Node.js, Python)</li>
+                                    <li>Cloud architecture (AWS, Azure)</li>
+                                </ul>
+                                <p class="mt-2">Il a travaillé chez .... (2019 à aujourd'hui) et chez ..... (2019 à 2020). Souhaitez-vous que je développe un domaine en particulier ?</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Input area -->
+                <div class="border-t border-gray-200 bg-white p-4">
+                    <div class="flex items-center">
+                        <button class="p-2 text-gray-500 hover:text-gray-700 rounded-full mr-1">
+                            <i class="fas fa-paperclip"></i>
+                        </button>
+                        <button class="p-2 text-gray-500 hover:text-gray-700 rounded-full mr-1">
+                            <i class="fas fa-microphone"></i>
+                        </button>
+                        <div class="relative flex-grow">
+                            <input type="text" id="message-input" placeholder="Taper votre message..." class="w-full border border-gray-300 rounded-full py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                            <button class="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-blue-600">
+                                <i class="far fa-smile"></i>
+                            </button>
+                        </div>
+                        <button id="send-btn" class="ml-3 bg-blue-600 hover:bg-blue-700 text-white rounded-full p-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                    <div class="flex justify-between items-center mt-2 text-xs text-gray-500">
+                        <div>
+                            <span id="char-count">0</span>/500
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-globe mr-1"></i>
+                            <select class="bg-transparent border-none text-xs focus:ring-0 focus:outline-none">
+                                <option>Français</option>
+                                <option>Anglais</option>
+                                <option>Espagnol</option>
+                                <option>allemand</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Document upload modal -->
+        <div id="upload-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+            <div class="bg-white rounded-lg shadow-xl w-full max-w-md">
+                <div class="px-6 py-4 border-b border-gray-200">
+                    <h3 class="text-lg font-semibold text-gray-900">Upload Documents</h3>
+                </div>
+                <div class="p-6">
+                    <div class="border-2 border-dashed border-gray-300 rounded-lg p-8 text-center">
+                        <i class="fas fa-cloud-upload-alt text-4xl text-blue-500 mb-3"></i>
+                        <p class="text-gray-600 mb-2">Drag & drop files here or click to browse</p>
+                        <p class="text-xs text-gray-500">Supported formats: PDF, DOCX, TXT, PPTX (Max 20MB)</p>
+                        <input type="file" class="hidden" id="file-upload" multiple>
+                        <button class="mt-4 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium">
+                            Select Files
+                        </button>
+                    </div>
+                    
+                    <div class="mt-6">
+                        <h4 class="text-sm font-medium text-gray-700 mb-2">Uploaded Documents</h4>
+                        <div class="space-y-2 max-h-40 overflow-y-auto">
+                            <div class="flex items-center justify-between bg-gray-50 p-2 rounded">
+                                <div class="flex items-center">
+                                    <i class="fas fa-file-pdf text-red-500 mr-2"></i>
+                                    <span class="text-sm">Resume.pdf</span>
+                                </div>
+                                <button class="text-red-500 hover:text-red-700">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </div>
+                            <div class="flex items-center justify-between bg-gray-50 p-2 rounded">
+                                <div class="flex items-center">
+                                    <i class="fas fa-file-word text-blue-500 mr-2"></i>
+                                    <span class="text-sm">Portfolio.docx</span>
+                                </div>
+                                <button class="text-red-500 hover:text-red-700">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="px-6 py-3 border-t border-gray-200 flex justify-end">
+                    <button type="button" class="px-4 py-2 text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 rounded-md border border-gray-300 mr-2">
+                        Cancel
+                    </button>
+                    <button type="button" class="px-4 py-2 text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 rounded-md">
+                        Save Changes
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Chat functionality
+            const chatContainer = document.getElementById('chat-container');
+            const messageInput = document.getElementById('message-input');
+            const sendBtn = document.getElementById('send-btn');
+            const charCount = document.getElementById('char-count');
+            
+            // Update character count
+            messageInput.addEventListener('input', function() {
+                charCount.textContent = this.value.length;
+            });
+            
+            // Send message
+            function sendMessage() {
+                const message = messageInput.value.trim();
+                if (message) {
+                    // Add user message to chat
+                    addMessageToChat(message, 'user');
+                    messageInput.value = '';
+                    charCount.textContent = '0';
+                    
+                    // Show typing indicator
+                    showTypingIndicator();
+                    
+                    // Simulate AI response after delay
+                    setTimeout(() => {
+                        removeTypingIndicator();
+                        const responses = [
+                            "I've analyzed your question and based on my knowledge and your documents, here's what I found...",
+                            "That's an interesting question! From what I know about you...",
+                            "According to the information you've shared with me...",
+                            "I can help with that! Here's what I understand..."
+                        ];
+                        const randomResponse = responses[Math.floor(Math.random() * responses.length)];
+                        addMessageToChat(randomResponse, 'ai');
+                        
+                        // Scroll to bottom
+                        chatContainer.scrollTop = chatContainer.scrollHeight;
+                    }, 1500 + Math.random() * 2000);
+                }
+            }
+            
+            // Send message on button click
+            sendBtn.addEventListener('click', sendMessage);
+            
+            // Send message on Enter key
+            messageInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    sendMessage();
+                }
+            });
+            
+            // Add message to chat
+            function addMessageToChat(message, sender) {
+                const messageDiv = document.createElement('div');
+                messageDiv.className = `flex mb-6 ${sender === 'user' ? 'justify-end' : ''}`;
+                
+                if (sender === 'ai') {
+                    messageDiv.innerHTML = `
+                        <div class="flex-shrink-0 mr-3">
+                            <img class="h-10 w-10 rounded-full" src="Gallerie/In my Jacket.jpeg" alt="AI Assistant">
+                        </div>
+                        <div>
+                            <div class="ai-bubble chat-bubble px-4 py-3 inline-block">
+                                ${message}
+                            </div>
+                        </div>
+                    `;
+                } else {
+                    messageDiv.innerHTML = `
+                        <div class="user-bubble chat-bubble px-4 py-3 inline-block">
+                            ${message}
+                        </div>
+                    `;
+                }
+                
+                chatContainer.appendChild(messageDiv);
+                chatContainer.scrollTop = chatContainer.scrollHeight;
+            }
+            
+            // Show typing indicator
+            function showTypingIndicator() {
+                const typingDiv = document.createElement('div');
+                typingDiv.className = 'flex mb-6';
+                typingDiv.id = 'typing-indicator';
+                typingDiv.innerHTML = `
+                    <div class="flex-shrink-0 mr-3">
+                        <img class="h-10 w-10 rounded-full" src="Gallerie/In my Jacket.jpeg" alt="AI Assistant">
+                    </div>
+                    <div>
+                        <div class="ai-bubble chat-bubble px-4 py-3 inline-block">
+                            <div class="typing-indicator">
+                                <span class="typing-dot"></span>
+                                <span class="typing-dot"></span>
+                                <span class="typing-dot"></span>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                
+                chatContainer.appendChild(typingDiv);
+                chatContainer.scrollTop = chatContainer.scrollHeight;
+            }
+            
+            // Remove typing indicator
+            function removeTypingIndicator() {
+                const typingIndicator = document.getElementById('typing-indicator');
+                if (typingIndicator) {
+                    typingIndicator.remove();
+                }
+            }
+            
+            // Suggestion buttons
+            document.querySelectorAll('.suggestion-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    messageInput.value = this.textContent.trim();
+                    messageInput.focus();
+                    charCount.textContent = messageInput.value.length;
+                });
+            });
+            
+            // Document upload modal
+            const uploadModal = document.getElementById('upload-modal');
+            const fileUpload = document.getElementById('file-upload');
+            
+            // Show modal when clicking upload button
+            document.querySelector('[aria-label="Upload"]').addEventListener('click', function() {
+                uploadModal.classList.remove('hidden');
+            });
+            
+            // Hide modal when clicking cancel or outside
+            uploadModal.addEventListener('click', function(e) {
+                if (e.target === this || e.target.classList.contains('close-modal')) {
+                    this.classList.add('hidden');
+                }
+            });
+            
+            // Trigger file input when clicking select files button
+            document.querySelector('#upload-modal button').addEventListener('click', function() {
+                fileUpload.click();
+            });
+            
+            // Handle file selection
+            fileUpload.addEventListener('change', function() {
+                if (this.files.length > 0) {
+                    // In a real app, you would upload files here
+                    alert(`${this.files.length} file(s) selected for upload`);
+                }
+            });
+            
+            // Pulse animation for microphone button when recording
+            const micBtn = document.querySelector('[aria-label="Record voice"]');
+            micBtn.addEventListener('click', function() {
+                this.classList.toggle('pulse-animation');
+                this.classList.toggle('text-red-500');
+                
+                if (this.classList.contains('pulse-animation')) {
+                    // Start recording
+                    alert("Voice recording started... Speak now");
+                } else {
+                    // Stop recording
+                    alert("Voice recording stopped");
+                }
+            });
+        });
+    </script>
+</body>
+</html>
