@@ -24,7 +24,19 @@
     gtag('config', 'G-222RHG6SZ6');
   </script>
 
- 
+<style>
+
+ /* Animation pour les éléments du portfolio */
+        .portfolio-item {
+            transition: all 0.3s ease;
+        }
+        
+        .portfolio-item:hover {
+            transform: scale(1.03);
+        }
+ </style>
+
+
 </head>
 
 
@@ -53,108 +65,33 @@
         <input type="search" name="Search" placeholder="Search..." class="w-72 lg:w-64 py-2 pl-10 text-sm rounded-md focus:outline-none bg-white text-gray-800 focus:bg-gray-50 border-none" />
       </div>
 
-      <!-- Navigation Links (Desktop) -->
-      <ul class="items-stretch hidden space-x-3 lg:flex">
-        
-        <li class="flex">
-          <a rel="noopener noreferrer" href="" class="flex items-center px-4 -mb-1 text-white hover:text-gray-200">Blog</a>
-        </li>
-        <li class="flex cursor-pointer" aria-haspopup="dialog" aria-expanded="false" aria-controls="hs-notifications" data-hs-overlay="#hs-notifications">
-          <span rel="noopener noreferrer" href="" class="flex items-center px-4 -mb-1 text-white hover:text-gray-200"> Contact</span>
-        </li>
-        <li class="flex">
-          <a rel="noopener noreferrer" href="IA_discuss.html" class="flex items-center px-4 -mb-1 text-white hover:text-gray-200">Assistance</a>
-        </li>
+     <!-- Navigation Links (Desktop) -->
+    <ul class="items-stretch hidden space-x-3 lg:flex">
+      <li class="flex">
+        <a rel="noopener noreferrer" href="" class="flex items-center px-4 -mb-1 text-white hover:text-gray-200">Blog</a>
+      </li>
+      <li class="flex cursor-pointer" aria-haspopup="dialog" aria-expanded="false" aria-controls="hs-notifications" data-hs-overlay="#hs-notifications">
+        <span rel="noopener noreferrer" href="" class="flex items-center px-4 -mb-1 text-white hover:text-gray-200">Contact</span>
+      </li>
+      <li class="flex">
+        <a rel="noopener noreferrer" href="IA_discuss.html" class="flex items-center px-4 -mb-1 text-white hover:text-gray-200">Assistance</a>
+      </li>
+      <li class="flex">
+        <a rel="noopener noreferrer" href="Sign_in.html" class="flex items-center px-4 py-[8px] -mb-1 text-white border-[1px] border-white rounded-md hover:bg-white hover:text-blue-800">Se connecter</a>
+      </li>
+    </ul>
 
-        <li class="flex">
-          <a rel="noopener noreferrer" href="Sign_in.html" class="flex items-center px-4 py-[8px] -mb-1 text-white border-[1px] border-white rounded-md hover:bg-white hover:text-blue-800">Se connecter</a>
-        </li>
-
-      </ul>
+    <!-- Hamburger Menu Button -->
+    <button id="openSidebar" title="Open menu" type="button" class="p-4">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 text-white">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
 
       
   
-      <!-- Search and Login (Desktop) -->
-      <div class="flex items-center space-x-4">
-        
-
-
-        <div class="dropdown relative hidden lg:flex">
-          <label tabindex="0" class="normal-case ml-2 cursor-grabbing">
-              <img src="avatar\fun-3d-illustration-american-referee.jpg" class=" relative top-[0px] w-12 h-12 rounded-full transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300" alt="" >
-          </label>
-          
-          <div tabindex="0" class="relative -left-[260px] dropdown-content z-[1] menu p-2 drop-shadow-sm bg-white text-blue-500 border-blue-600 border-2 border-solid rounded-lg w-72">      
-              <div class="p-3 divide-y divide-blue-400 divide-neutral">
-                  <div class="flex space-x-4 items-center p-4">
-                      <div class="flex mr-auto items-center space-x-4">
-                          <img src="avatar\jeune-homme-souriant-aux-lunettes_1308-174702.avif" alt="Name" class="w-16 h-16 shrink-0 rounded-full"/>
-                          <div class="space-y-2 flex flex-col flex-1 truncate">
-                              <div class="relative leading-tight">
-                              <span class="flex">
-                                  <span class="truncate relative pr-8">Name</span>
-                              </span>
-                              </div>
-                              <p class="font-normal leading-tight truncate">example@mail.com</p>
-                          </div>
-                      </div>
-                  </div>
-                  <div aria-label="navigation" class="py-2">
-                      <nav class="grid gap-1">
-                          <a href="/" class="flex items-center leading-6 space-x-3 py-3 px-4 w-full text-md focus:outline-none hover:bg-gray-100 rounded-md">
-                              <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
-                                  <path d="M3 5C3 3.89543 3.89543 3 5 3H9C10.1046 3 11 3.89543 11 5V9C11 10.1046 10.1046 11 9 11H5C3.89543 11 3 10.1046 3 9V5ZM9 5H5V9H9V5Z"/><path d="M3 15C3 13.8954 3.89543 13 5 13H9C10.1046 13 11 13.8954 11 15V19C11 20.1046 10.1046 21 9 21H5C3.89543 21 3 20.1046 3 19V15ZM9 15H5V19H9V15Z"/><path d="M13 5C13 3.89543 13.8954 3 15 3H19C20.1046 3 21 3.89543 21 5V9C21 10.1046 20.1046 11 19 11H15C13.8954 11 13 10.1046 13 9V5ZM19 5H15V9H19V5Z"/><path d="M13 15C13 13.8954 13.8954 13 15 13H19C20.1046 13 21 13.8954 21 15V19C21 20.1046 20.1046 21 19 21H15C13.8954 21 13 20.1046 13 19V15ZM19 15H15V19H19V15Z"/>
-                              </svg>
-                              <span>Publier</span>
-                          </a>
-                          <a href="/" class="flex items-center leading-6 space-x-3 py-3 px-4 w-full text-md focus:outline-none hover:bg-gray-100 rounded-md">
-                              <svg class="w-7 h-7" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none">
-                                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                  <path d="M10.325 4.317c.426 -1.756 2.924 -1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543 -.94 3.31 .826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756 .426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543 -.826 3.31 -2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756 -2.924 1.756 -3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543 .94 -3.31 -.826 -2.37 -2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756 -.426 -1.756 -2.924 0 -3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94 -1.543 .826 -3.31 2.37 -2.37c1 .608 2.296 .07 2.572 -1.065z"></path>
-                                  <path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"></path>
-                              </svg>
-                              <span>Paramètres</span>
-                          </a>
-                          <a href="/" class="flex items-center leading-6 space-x-3 py-3 px-4 w-full text-md  focus:outline-none hover:bg-gray-100 rounded-md">
-                              <svg class="w-7 h-7" viewBox="0 0 35 35" fill="currentColor">
-                                  <path d="M13.2,18.456H8.475a1.25,1.25,0,1,1,0-2.5H13.2a1.25,1.25,0,0,1,0,2.5Z"/>
-                                  <path d="M10.839,20.82a1.25,1.25,0,0,1-1.25-1.25V14.841a1.25,1.25,0,0,1,2.5,0V19.57A1.25,1.25,0,0,1,10.839,20.82Z"/>
-                                  <path d="M20.954,18.515a1.251,1.251,0,0,0,0-2.5,1.251,1.251,0,0,0,0,2.5Z"/>
-                                  <path d="M23.8,15.67a1.251,1.251,0,0,0,0-2.5,1.251,1.251,0,0,0,0,2.5Z"/>
-                                  <path d="M23.68,21.241a1.251,1.251,0,0,0,0-2.5,1.251,1.251,0,0,0,0,2.5Z"/>
-                                  <path d="M26.525,18.4a1.251,1.251,0,0,0,0-2.5,1.251,1.251,0,0,0,0,2.5Z"/>
-                                  <path d="M28.886,34.75a4.9,4.9,0,0,1-4.752-3.663l-1.4-4.1a20.448,20.448,0,0,1-10.436-.068l-1.456,4.257a4.725,4.725,0,0,1-1.717,2.549,4.905,4.905,0,0,1-7.9-3.836V19.2c0-.31.038-.868.054-1.08l-.052-.945A10.494,10.494,0,0,1,11.693,6.641a10.351,10.351,0,0,1,3.728.686,3.821,3.821,0,0,0,1.373.235h1.412a3.751,3.751,0,0,0,1.353-.227A10.32,10.32,0,0,1,23.5,6.643,10.674,10.674,0,0,1,33.781,17.42V29.892A4.881,4.881,0,0,1,28.886,34.75ZM23.5,24.141a1.253,1.253,0,0,1,1.183.846l1.841,5.384a2.438,2.438,0,0,0,2.359,1.879,2.379,2.379,0,0,0,2.395-2.358V17.42a8.163,8.163,0,0,0-7.822-8.277,7.78,7.78,0,0,0-3,.524h0a6.249,6.249,0,0,1-2.255.395H16.794a6.311,6.311,0,0,1-2.269-.4,7.858,7.858,0,0,0-2.832-.52,7.978,7.978,0,0,0-7.974,7.965l.054.955a1.9,1.9,0,0,1,0,.2c-.011.141-.05.66-.05.938V29.892a2.406,2.406,0,0,0,3.871,1.86,2.35,2.35,0,0,0,.855-1.29l1.869-5.475a1.251,1.251,0,0,1,1.59-.777c.062.02,6.155,2.075,11.123.025A1.247,1.247,0,0,1,23.5,24.141ZM20.01,8.5h0Z"/>
-                                  <path d="M18.294,7.261a1.23,1.23,0,0,1-.105-1.184,1.891,1.891,0,0,1,.874-1.04A4.97,4.97,0,0,1,22.7,4.874a8.184,8.184,0,0,0,4.595.142A3.683,3.683,0,0,0,29.854,1.5,1.278,1.278,0,0,0,28.6.25a1.262,1.262,0,0,0-1.25,1.25c.066,1.244-1.558,1.378-2.5,1.266-1.574-.186-3.049-.792-4.663-.617a5.182,5.182,0,0,0-3.917,2.183,3.982,3.982,0,0,0-.137,4.19c.836,1.372,3,.117,2.158-1.261Z"/>
-                              </svg>
-                              <span>Commenter</span>
-                          </a>
-                      </nav>
-                  </div>
-                  <div class="pt-2">
-                      <button type="button" class="flex items-center space-x-3 py-3 px-4 w-full leading-6 text-md focus:outline-none hover:bg-gray-100 rounded-md">
-                          <svg class="w-7 h-7" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none">
-                              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                              <path d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2"></path>
-                              <path d="M9 12h12l-3 -3"></path>
-                              <path d="M18 15l3 -3"></path>
-                          </svg>
-                          <span>Déconnecter</span>
-                      </button>
-                  </div>
-              </div>
-          </div>
-      </div>
-        
-
-      </div>
+      
   
-      <!-- Mobile Menu Button -->
-      <button id="openSidebar" title="Open menu" type="button" class="p-4 lg:hidden">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 text-white">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-        </svg>
-      </button>
-
 
       
 
@@ -414,7 +351,7 @@
 
 
 
-  <!-- Slider indicators -->
+  !<-- Slider indicators -->
   <div class="flex absolute bottom-5 -z-[1] left-1/2 -translate-x-1/2 space-x-2">
     <button class="indicator w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-400"></button>
     <button class="indicator w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-400"></button>
@@ -495,7 +432,7 @@
       <div
           class="w-[20rem] mx-auto flex flex-col shadow-xl gap-2 px-4 mt-6 sm:mt-0 border border-gray-300 border-gray-300 rounded-lg bg-white dark:bg-gray-900">
           <div class="w-full flex justify-center items-center">
-              <img class="w-[8rem] h-[8rem] rounded-full outline outline-offset-2 outline-1 outline-blue-400 shadow-lg relative -top-[4rem]" src="Mes_images\IMG_3556.jpg" alt="Profile Image" />
+              <img class="w-[8rem] h-[8rem] object-cover object-top scale-125 rounded-full outline outline-offset-2 outline-1 outline-blue-400 shadow-lg relative -top-[4rem]" src="Mes_images\IMG_3556.jpg" alt="Profile Image" />
           </div>
 
           <div class="w-full h-full text-center flex flex-col gap-4 relative -top-10">
@@ -514,7 +451,7 @@
       <div
           class="w-[20rem] mx-auto flex flex-col shadow-xl gap-2 px-4 mt-6 sm:mt-0 border border-gray-300 border-gray-300 rounded-lg bg-white dark:bg-gray-900">
           <div class="w-full flex justify-center items-center">
-              <img class="w-[8rem] h-[8rem] rounded-full outline outline-offset-2 outline-1 outline-blue-400 shadow-lg relative -top-[4rem]" src="Mes_images\IMG_3540.jpg" alt="Profile Image" />
+              <img class="w-[8rem] h-[8rem] object-cover object-top scale-125 rounded-full outline outline-offset-2 outline-1 outline-blue-400 shadow-lg relative -top-[4rem]" src="Mes_images\IMG_3540.jpg" alt="Profile Image" />
           </div>
 
           <div class="w-full h-full text-center flex flex-col gap-4 relative -top-10">
@@ -533,7 +470,7 @@
       <div
           class="w-[20rem] mx-auto flex flex-col shadow-xl gap-2 px-4 mt-6 sm:mt-0 border border-gray-300 border-gray-300 rounded-lg bg-white dark:bg-gray-900">
           <div class="w-full flex justify-center items-center">
-              <img class="w-[8rem] h-[8rem] rounded-full outline outline-offset-2 outline-1 outline-blue-400 relative -top-[4rem]" src="Mes_images\In my Jacket.jpeg" alt="Profile Image" />
+              <img class="w-[8rem] h-[8rem] object-cover object-top scale-125 rounded-full outline outline-offset-2 outline-1 outline-blue-400 shadow-lg relative -top-[4rem]" src="Mes_images\In my Jacket.jpeg" alt="Profile Image" />
           </div>
 
           <div class="w-full h-full text-center flex flex-col gap-4 relative -top-10">
@@ -590,198 +527,204 @@
 
 
 
+<style>
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+</style>
 
-
-
-
-
-
-<div id="newContent1" class="fade-in z-[3] overflow-auto fixed inset-0 bg-white flex flex-col lg:w-screen items-center justify-center w-screen hidden">
-
-
-  <button onclick="goBack('newContent1')" class="absolute top-4 right-4">
-    <svg class="w-10 h-10 text-gray-600 hover:text-gray-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+<!-- Section 1: Early Education -->
+<div id="newContent1" class="z-[3] overflow-auto fixed inset-0 bg-gradient-to-b from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 flex flex-col items-center justify-center w-screen hidden animate-fade-in">
+  <button onclick="goBack('newContent1')" class="absolute top-4 right-4 p-1 sm:p-1.5 rounded-full bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-all focus:outline-none focus:ring-2 focus:ring-blue-500 z-10">
+    <svg class="w-6 sm:w-8 h-6 sm:h-8 text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-gray-100" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
     </svg>
   </button>
 
-
-  <section class="lg:h-[800px] text-black body-font">
-    <div class="mt-[1000px] sm:mt-[850px] md:mt-[850px] lg:mt-[0px] lg:grid lg:grid-cols-2 container px-5 py-24 mx-auto lg:flex lg:flex-wrap">
-      <div class="sm:w-2/3 sm:mx-auto lg:w-full mb-10 lg:mb-0 rounded-lg overflow-hidden">
-        <img alt="feature" class="object-cover object-center h-full w-full" src="Mes_images\IMG_3556.jpg">
+  <section class="min-h-[calc(100vh-4rem)] text-gray-900 dark:text-gray-100">
+    <div class="container max-w-5xl px-4 sm:px-6 py-4 mx-auto grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 pt-4 lg:pt-6">
+      <div class="w-full rounded-xl overflow-hidden shadow-lg">
+        <img alt="Christophe Wavoeke" class="object-cover object-top w-full h-64 sm:h-80 md:h-96 lg:h-[28rem] aspect-[4/3] rounded-xl" src="Mes_images/IMG_3556.jpg">
       </div>
-      <div class="flex flex-col flex-wrap lg:py-6 -mb-10 lg:w-full lg:pl-12 lg:text-left text-center">
-        
-       
-        <div class="flex flex-col mb-10 lg:items-start items-center">
-  
-          <div class="flex-grow text-justify">
-            <h2 class="text-gray-900 text-lg title-font font-medium mb-3">Bienvenue au partage de ma petite expérience ! Ce profil retrace mon parcours et mes expériences professionnelles, de mes débuts jusqu'à aujourd'hui ! </h2>
-            <p class="leading-relaxed text-base">
-
-              Je m'appelle : Christophe Wavoeke, ingénieur en Génie Mathématique, spécialisé en modélisation et en programmation informatique.  
-              Avant d’entrer dans le vif du sujet, permettez-moi de revenir sur mon parcours.Mon début de scolarité primaire s'effectué dans une école privée, le <div></div>Complexe scolaire Les Merveilles, où j’ai suivi mon parcours depuis la maternelle jusqu’au CM2, la classe charnière pour le premier grand examen national au Bénin. J’ai obtenu mon <div></div>Certificat d'Études Primaires (CEP) du premier coup, une étape qui marquait le début de mon aventure académique.  
-              Souhaitant découvrir un nouvel environnement et relever d'autres défis, j’ai poursuivi mes études secondaires dans un établissement public, le <div></div>Collège d’Enseignement Général (CEG) de Honvié.J'ai obtenu mon <div></div>Brevet d’Études du Premier Cycle (BEPC) dès ma première tentative, en 2016. Cette année-là, le taux de réussite national était particulièrement bas, avoisinant les <div></div>16,.. %. Je me souviens de cette période où l’inquiétude était omniprésente, mais mon travail a porté ses fruits, et j’en garde aujourd’hui une immense fierté.  
-              Dès le second cycle du collège,je me suis particulièrement investi en mathématiques. Cet engagement m’a naturellement conduit à choisir une filière scientifique. J'ai fait la série C, et j'ai obtenu mon baccalauréat avec mention Assez Bien.  
-              Toujours passionné par les mathématiques et plus largement par les sciences. [...]</p>
-            <a class="mt-3 text-indigo-500 inline-flex items-center"><!-- <svg class="transform transition duration-300 hover:-translate-x-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
-  <path fill-rule="evenodd" d="M7.28 7.72a.75.75 0 0 1 0 1.06l-2.47 2.47H21a.75.75 0 0 1 0 1.5H4.81l2.47 2.47a.75.75 0 1 1-1.06 1.06l-3.75-3.75a.75.75 0 0 1 0-1.06l3.75-3.75a.75.75 0 0 1 1.06 0Z" clip-rule="evenodd" />
-</svg> -->
-<div class="pl-3 pr-3">Savoir plus</div>
-             <svg onclick="folow('2')" class="transform transition duration-300 hover:translate-x-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
-  <path fill-rule="evenodd" d="M16.72 7.72a.75.75 0 0 1 1.06 0l3.75 3.75a.75.75 0 0 1 0 1.06l-3.75 3.75a.75.75 0 1 1-1.06-1.06l2.47-2.47H3a.75.75 0 0 1 0-1.5h16.19l-2.47-2.47a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
-</svg>
-
-            </a>
+      <div class="flex flex-col lg:pl-8 lg:text-left text-center">
+        <div class="flex flex-col mb-6 lg:items-start items-center">
+          <div class="flex items-center mb-4">
+            <svg class="w-6 sm:w-8 h-6 sm:h-8 text-blue-600 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+              <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM3.751 20.105a8.25 8.25 0 0 1 16.498 0 .75.75 0 0 1-.437.695A18.683 18.683 0 0 1 12 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 0 1-.437-.695Z" clip-rule="evenodd" />
+            </svg>
+            <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white">Mon Parcours Scolaire</h2>
+          </div>
+          <div class="flex-grow text-justify text-gray-700 dark:text-gray-300 overflow-y-auto max-h-[50vh] lg:max-h-[60vh] text-sm sm:text-base">
+            <p class="leading-relaxed mb-4">
+              Je m'appelle <span class="font-semibold">Christophe Wavoeke</span>, ingénieur en Génie Mathématique, spécialisé en modélisation et programmation informatique. Mon parcours scolaire a débuté au <span class="font-semibold">Complexe Scolaire Les Merveilles</span>, une école privée où j’ai suivi mes études de la maternelle jusqu’au CM2. J’ai obtenu mon <span class="font-semibold">Certificat d’Études Primaires (CEP)</span> dès la première tentative, un moment clé qui a marqué le début de mon aventure académique.
+            </p>
+            <p class="leading-relaxed mb-4">
+              Pour relever de nouveaux défis, j’ai intégré le <span class="font-semibold">Collège d’Enseignement Général (CEG) de Honvié</span>, un établissement public, pour mes études secondaires. En 2016, j’ai décroché mon <span class="font-semibold">Brevet d’Études du Premier Cycle (BEPC)</span> avec un taux de réussite national d’environ <span class="font-semibold">16%</span>. Cette réussite, dans un contexte compétitif, reste une grande fierté.
+            </p>
+            <p class="leading-relaxed mb-4">
+              Au second cycle, ma passion pour les mathématiques s’est intensifiée, me conduisant à choisir la série C. J’ai obtenu mon <span class="font-semibold">baccalauréat</span> avec mention Assez Bien, consolidant mon attrait pour les sciences et posant les bases de ma carrière en ingénierie.
+            </p>
+            <div class="mt-6 flex justify-center lg:justify-start gap-4 items-center">
+              <button onclick="follow('2')" class="px-3 py-1.5 bg-blue-600 text-white rounded-lg hover:bg-blue-700 hover:scale-105 transition-all focus:outline-none focus:ring-2 focus:ring-blue-500 flex items-center gap-2 text-sm sm:text-base">
+                Suivant
+                <svg class="w-5 sm:w-6 h-5 sm:h-6 transform transition duration-300 hover:translate-x-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                  <path fill-rule="evenodd" d="M16.72 7.72a.75.75 0 0 1 1.06 0l3.75 3.75a.75.75 0 0 1 0 1.06l-3.75 3.75a.75.75 0 1 1-1.06-1.06l2.47-2.47H3a.75.75 0 0 1 0-1.5h16.19l-2.47-2.47a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
-
-
-
       </div>
+    </div>
+    <!-- Progress Indicators -->
+    <div class="absolute bottom-4 flex gap-2">
+      <span class="w-3 h-3 rounded-full bg-blue-600"></span>
+      <span class="w-3 h-3 rounded-full bg-gray-300"></span>
+      <span class="w-3 h-3 rounded-full bg-gray-300"></span>
     </div>
   </section>
 </div>
 
-
-
-
-
-<div id="newContent2" class="fade-in z-[3] overflow-auto fixed inset-0 bg-white flex flex-col lg:w-screen items-center justify-center w-screen hidden">
-
-
-  <button onclick="goBack('newContent2')" class="absolute top-4 right-4">
-    <svg class="w-10 h-10 text-gray-600 hover:text-gray-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+<!-- Section 2: University Education -->
+<div id="newContent2" class="z-[3] overflow-auto fixed inset-0 bg-gradient-to-b from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 flex flex-col items-center justify-center w-screen hidden animate-fade-in">
+  <button onclick="goBack('newContent2')" class="absolute top-4 right-4 p-1 sm:p-1.5 rounded-full bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-all focus:outline-none focus:ring-2 focus:ring-blue-500 z-10">
+    <svg class="w-6 sm:w-8 h-6 sm:h-8 text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-gray-100" xmlns="http://www.w3noise.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
     </svg>
   </button>
 
-
-  <section class="lg:h-[800px] text-black body-font">
-    <div class="mt-[1200px] sm:mt-[1050px] md:mt-[1050px] lg:mt-[0px] lg:grid lg:grid-cols-2 container px-5 py-24 mx-auto lg:flex lg:flex-wrap">
-      <div class="sm:w-2/3 sm:mx-auto lg:w-full mb-10 lg:mb-0 rounded-lg overflow-hidden">
-        <img alt="feature" class="object-cover object-center h-full w-full" src="Mes_images\IMG_3540.jpg">
+  <section class="min-h-[calc(100vh-4rem)] text-gray-900 dark:text-gray-100">
+    <div class="container max-w-5xl px-4 sm:px-6 py-4 mx-auto grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 pt-4 lg:pt-6">
+      <div class="w-full rounded-xl overflow-hidden shadow-lg">
+        <img alt="University Journey" class="object-cover object-top w-full h-64 sm:h-80 md:h-96 lg:h-[28rem] aspect-[4/3] rounded-xl" src="Mes_images/IMG_3540.jpg">
       </div>
-      <div class="flex flex-col flex-wrap lg:py-6 -mb-10 lg:w-full lg:pl-12 lg:text-left text-center">
-        
-
-       
-        <div class="flex flex-col mb-10 lg:items-start items-center">
-  
-          <div class="flex-grow">
-            <h2 class="text-gray-900 text-lg title-font font-medium mb-3">Niveau universitaire</h2>
-            <p class="leading-relaxed text-base">Après l'obtention de mon baccalauréat, cette passion pour les sciences m'a poussé à passer deux concours : celui pour l'ENS (École Normale Supérieure) de Natitingou et celui de l'INSPEI (Institut National Supérieur des Classes Préparatoires aux Études d'Ingénieur). J'ai été admis aux deux concours. La première école, limitée à Bac+3, offre des débouchés dans l'enseignement, la recherche ou la poursuite des études. La deuxième, école préparatoire, permet d'intégrer des écoles d'ingénieurs. J'ai choisi l'INSPEI, où j'ai brillamment réussi, avant de poursuivre à l'ENSGMM (École Nationale Supérieure de Génie Mathématique et Modélisation), où j'ai suivi une formation approfondie en Informatique, Recherche Opérationnelle et Logistique (IRLO), Modélisation Aléatoire, Statistique et Finance (MASF), ainsi qu'en Modélisation et Simulation Numérique.<br/>
-              Pendant mon cursus universitaire, j’ai eu l’opportunité de travailler sur plusieurs projets touchant au développement web, à la simulation numérique, à la modélisation statistique, à l’application de modèles d’intelligence artificielle, à la conception de modèles de prédiction et à l’analyse de données. En quelque sorte, il s’agissait d’une formation complète exploitant l’outil informatique pour répondre aux besoins de divers secteurs et résoudre des problématiques spécifiques.  
-
-Parallèlement aux cours, je me suis principalement auto-formé en développement web, ce qui est aujourd’hui l’une de mes plus grandes spécialités. Je me souviens qu’un de nos professeurs nous avait confié un projet de réalisation web et, en découvrant mon travail, il pensait que j’avais utilisé un template, alors que j’avais pris le soin d’écrire mon code en intégrant certains composants fournis par le framework Bootstrap. Par la suite, j’ai évolué vers Tailwind CSS, un intégrateur CSS performant et apprécié des professionnels.  
-
-Durant mes études, j’ai eu de nombreuses idées de projets web que j’ai commencés en parallèle, mais que je n’ai malheureusement pas pu finaliser, faute de temps entre les cours et mes propres projets. Aujourd’hui, je me sens libre et entièrement dédié à ce domaine. J’ai également suivi une formation enrichissante via le programme **"Seeds for the Future"**, organisé par **Huawei ITC**, lors de sa 9ᵉ édition. Cette formation couvrait l’intelligence artificielle, le développement web et le cloud computing, et s’est conclue par l’obtention d’attestations. De plus, j’ai suivi beaucoups de séances Webinaires intéressantes qui ont renforcé mes compétences dans le dev web. [...]
-            </p>
-            <a class="mt-3 text-indigo-500 inline-flex items-center"><svg onclick="prev('1')" class="transform transition duration-300 hover:-translate-x-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
-  <path fill-rule="evenodd" d="M7.28 7.72a.75.75 0 0 1 0 1.06l-2.47 2.47H21a.75.75 0 0 1 0 1.5H4.81l2.47 2.47a.75.75 0 1 1-1.06 1.06l-3.75-3.75a.75.75 0 0 1 0-1.06l3.75-3.75a.75.75 0 0 1 1.06 0Z" clip-rule="evenodd" />
-</svg>
-<div class="pl-3 pr-3">Savoir plus</div>
-             <svg onclick="folow('3')" class="transform transition duration-300 hover:translate-x-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
-  <path fill-rule="evenodd" d="M16.72 7.72a.75.75 0 0 1 1.06 0l3.75 3.75a.75.75 0 0 1 0 1.06l-3.75 3.75a.75.75 0 1 1-1.06-1.06l2.47-2.47H3a.75.75 0 0 1 0-1.5h16.19l-2.47-2.47a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
-</svg>
-
-            </a>
+      <div class="flex flex-col lg:pl-8 lg:text-left text-center">
+        <div class="flex flex-col mb-6 lg:items-start items-center">
+          <div class="flex items-center mb-4">
+            <svg class="w-6 sm:w-8 h-6 sm:h-8 text-blue-600 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M11.7 2.805a.75.75 0 0 1 .6 0A60.65 60.65 0 0 1 22.83 8.72a.75.75 0 0 1-.231 1.337 49.948 49.948 0 0 0-9.902 3.912l-.003.002c-.114.06-.227.119-.34.18a.75.75 0 0 1-.707 0A50.88 50.88 0 0 0 7.5 12.173a.75.75 0 0 1-.231-1.337A60.653 60.653 0 0 1 11.7 2.805Z" />
+              <path d="M13.06 15.473a48.45 48.45 0 0 1 7.666-3.282c.134 1.414.22 2.843.127 4.265a.75.75 0 0 1-.442.656 48.042 48.042 0 0 1-8.364 4.106.75.75 0 0 1-.708 0 48.06 48.06 0 0 1-8.363-4.106.75.75 0 0 1-.44-.656c-.094-1.422-.007-2.851.126-4.265a48.639 48.639 0 0 1 7.664 3.282.75.75 0 0 1 .14.842 38.324 38.324 0 0 0-2.015 3.322.75.75 0 0 1-1.405-.526 49.519 49.519 0 0 1 2.986-4.937c.214-.112.428-.223.641-.334a.75.75 0 0 1 .707 0c.214.111.428.222.642.334a49.518 49.518 0 0 1 2.986 4.937.75.75 0 0 1-1.404.526 38.323 38.323 0 0 0-2.016-3.322.75.75 0 0 1 .139-.842Z" />
+              <path d="M18 10.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z" />
+            </svg>
+            <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white">Niveau Universitaire</h2>
           </div>
-        </div> 
-
-      </div>
-    </div>
-  </section>
-</div>
-
-
-
-
-
-
-
-<div id="newContent3" class="fade-in z-[3] overflow-auto fixed inset-0 bg-white flex flex-col lg:w-screen items-center justify-center w-screen hidden">
-
-
-  <button onclick="goBack('newContent3')" class="absolute top-4 right-4">
-    <svg class="w-10 h-10 text-gray-600 hover:text-gray-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-    </svg>
-  </button>
-
-
-  <section class="lg:h-[800px] text-black body-font">
-    <div class="mt-[1200px] sm:mt-[1050px] md:mt-[1050px] lg:mt-[0px] lg:grid lg:grid-cols-2 container px-5 py-24 mx-auto lg:flex lg:flex-wrap">
-      <div class="sm:w-2/3 sm:mx-auto lg:w-full mb-10 lg:mb-0 rounded-lg overflow-hidden">
-        <img alt="feature" class="object-cover object-center h-full w-full" src="Mes_images\In my Jacket.jpeg">
-      </div>
-      <div class="flex flex-col flex-wrap lg:py-6 -mb-10 lg:w-full lg:pl-12 lg:text-left text-center">
-        
-
-       
-        <div class="flex flex-col mb-10 lg:items-start items-center">
-  
-          <div class="flex-grow">
-            <h2 class="text-gray-900 text-lg title-font font-medium mb-3">Expériences professionnelles</h2>
-            <p class="leading-relaxed text-base">J'ai principalement appris par auto-formation. Dès ma première année en classes préparatoires, après avoir pris en main le cours de programmation en langage C, j'ai commencé à me former moi-même aux langages de programmation web avec un ami. En environ huit mois, j'ai maîtrisé le HTML, CSS, PHP et JavaScript, ce qui m'a permis de réaliser de petits projets sur mon ordinateur. Par la suite, j'ai découvert certains frameworks pour le développement web. 
-
-          Notre programme de formation en ingénierie exige une solide maîtrise de la programmation dans divers langages. Ainsi, nous avons étudié le **C, R, MATLAB, Python**, ainsi que **LaTeX** pour la rédaction des documents de projet. Au cours de mes stages, j’ai travaillé sur un **projet de développement web**, contribué à la gestion des **bases de données agricoles** à la **DDAEP**, et développé des **méthodes de prédiction spatiale** en utilisant **MATLAB et Python**, ainsi que des **méthodes de résolution numérique**.
-          En effet , j’ai effectué mes stages dans trois environnements différents : deux entreprises et un laboratoire de recherche scientifique.  
-
-          Mon premier stage s’est déroulé au sein d’une entreprise spécialisée dans le développement web et mobile pour des clients, qu’ils soient particuliers ou entreprises. Cette expérience m’a permis de découvrir de nouvelles notions tout en apportant une réelle valeur ajoutée à l’entreprise. En tant que développeur fullstack, j’ai eu l’occasion de toucher à différents aspects du développement, en collaborant avec une équipe dynamique.  
-          
-          Mon deuxième stage a eu lieu à la **DDAEP**, une direction départementale dont la mission consiste à recueillir des informations sous forme de données collectées via une plateforme web et mobile, afin d’analyser les tendances du marché agricole. Le personnel administratif gérait la plateforme en ajoutant les produits, leurs prix, qualités et unités, tandis que les agents de terrain collectaient les informations via ces plateformes pour alimenter les analyses.  
-          
-          Enfin, mon dernier stage s’est déroulé dans un laboratoire de recherche scientifique, où j’ai travaillé sur l’implémentation de deux méthodes géostatistiques de prédiction spatiale. Cette expérience m’a permis de développer mes compétences en programmation avec **Python, R et MATLAB**, en rédigeant des codes pour la prédiction d’attributs (variables physiques) et l’analyse de données.
-            
+          <div class="flex-grow text-justify text-gray-700 dark:text-gray-300 overflow-y-auto max-h-[50vh] lg:max-h-[60vh] text-sm sm:text-base">
+            <p class="leading-relaxed mb-4">
+              Après mon baccalauréat, ma passion pour les sciences m’a conduit à réussir deux concours : celui de l’<span class="font-semibold">ENS Natitingou</span> et celui de l’<span class="font-semibold">INSPEI</span>. J’ai choisi l’INSPEI, une école préparatoire, puis intégré l’<span class="font-semibold">ENSGMM</span> pour une formation en Génie Mathématique, couvrant l’<span class="font-semibold">Informatique</span>, la <span class="font-semibold">Recherche Opérationnelle</span>, la <span class="font-semibold">Modélisation Aléatoire</span>, et la <span class="font-semibold">Simulation Numérique</span>.
             </p>
-            <a class="mt-3 text-indigo-500 inline-flex items-center"><svg onclick="prev('2')" class="transform transition duration-300 hover:-translate-x-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
-  <path fill-rule="evenodd" d="M7.28 7.72a.75.75 0 0 1 0 1.06l-2.47 2.47H21a.75.75 0 0 1 0 1.5H4.81l2.47 2.47a.75.75 0 1 1-1.06 1.06l-3.75-3.75a.75.75 0 0 1 0-1.06l3.75-3.75a.75.75 0 0 1 1.06 0Z" clip-rule="evenodd" />
-</svg>
-<div class="pl-5 pr-5 inline">Savoir plus</div>
-             <!-- <svg class="transform transition duration-300 hover:translate-x-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
-  <path fill-rule="evenodd" d="M16.72 7.72a.75.75 0 0 1 1.06 0l3.75 3.75a.75.75 0 0 1 0 1.06l-3.75 3.75a.75.75 0 1 1-1.06-1.06l2.47-2.47H3a.75.75 0 0 1 0-1.5h16.19l-2.47-2.47a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" /> -->
-</svg>
-
-            </a>
+            <p class="leading-relaxed mb-4">
+              Mes projets universitaires incluaient le développement web, la modélisation statistique, et l’application de modèles d’intelligence artificielle. En parallèle, je me suis auto-formé au développement web, maîtrisant <span class="font-semibold">HTML</span>, <span class="font-semibold">CSS</span>, <span class="font-semibold">JavaScript</span>, et des frameworks comme <span class="font-semibold">Bootstrap</span> et <span class="font-semibold">Tailwind CSS</span>. Un projet web réalisé pour un professeur a été particulièrement remarqué pour sa qualité.
+            </p>
+            <p class="leading-relaxed mb-4">
+              J’ai également participé à la 9ᵉ édition du programme <span class="font-semibold">Seeds for the Future</span> de <span class="font-semibold">Huawei ITC</span>, renforçant mes compétences en IA, développement web, et cloud computing. De nombreux webinaires ont complété ma formation, me préparant à des projets professionnels ambitieux.
+            </p>
+            <div class="mt-6 flex justify-center lg:justify-start gap-4 items-center">
+              <button onclick="prev('1')" class="px-3 py-1.5 bg-blue-600 text-white rounded-lg hover:bg-blue-700 hover:scale-105 transition-all focus:outline-none focus:ring-2 focus:ring-blue-500 flex items-center gap-2 text-sm sm:text-base">
+                Précédent
+                <svg class="w-5 sm:w-6 h-5 sm:h-6 transform transition duration-300 hover:-translate-x-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                  <path fill-rule="evenodd" d="M7.28 7.72a.75.75 0 0 1 0 1.06l-2.47 2.47H21a.75.75 0 0 1 0 1.5H4.81l2.47 2.47a.75.75 0 1 1-1.06 1.06l-3.75-3.75a.75.75 0 0 1 0-1.06l3.75-3.75a.75.75 0 0 1 1.06 0Z" clip-rule="evenodd" />
+                </svg>
+              </button>
+              <button onclick="follow('3')" class="px-3 py-1.5 bg-blue-600 text-white rounded-lg hover:bg-blue-700 hover:scale-105 transition-all focus:outline-none focus:ring-2 focus:ring-blue-500 flex items-center gap-2 text-sm sm:text-base">
+                Suivant
+                <svg class="w-5 sm:w-6 h-5 sm:h-6 transform transition duration-300 hover:translate-x-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                  <path fill-rule="evenodd" d="M16.72 7.72a.75.75 0 0 1 1.06 0l3.75 3.75a.75.75 0 0 1 0 1.06l-3.75 3.75a.75.75 0 1 1-1.06-1.06l2.47-2.47H3a.75.75 0 0 1 0-1.5h16.19l-2.47-2.47a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
-
-
-
       </div>
+    </div>
+    <!-- Progress Indicators -->
+    <div class="absolute bottom-4 flex gap-2">
+      <span class="w-3 h-3 rounded-full bg-gray-300"></span>
+      <span class="w-3 h-3 rounded-full bg-blue-600"></span>
+      <span class="w-3 h-3 rounded-full bg-gray-300"></span>
     </div>
   </section>
 </div>
 
+<!-- Section 3: Professional Experience -->
+<div id="newContent3" class="z-[3] overflow-auto fixed inset-0 bg-gradient-to-b from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 flex flex-col items-center justify-center w-screen hidden animate-fade-in">
+  <button onclick="goBack('newContent3')" class="absolute top-4 right-4 p-1 sm:p-1.5 rounded-full bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-all focus:outline-none focus:ring-2 focus:ring-blue-500 z-10">
+    <svg class="w-6 sm:w-8 h-6 sm:h-8 text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-gray-100" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+    </svg>
+  </button>
 
-
-
- 
-
+  <section class="min-h-[calc(100vh-4rem)] text-gray-900 dark:text-gray-100">
+    <div class="container max-w-5xl px-4 sm:px-6 py-4 mx-auto grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 pt-4 lg:pt-6">
+      <div class="w-full rounded-xl overflow-hidden shadow-lg">
+        <img alt="Professional Work" class="object-cover object-top w-full h-64 sm:h-80 md:h-96 lg:h-[28rem] aspect-[4/3] rounded-xl" src="Mes_images\In my Jacket.jpeg">
+      </div>
+      <div class="flex flex-col lg:pl-8 lg:text-left text-center">
+        <div class="flex flex-col mb-6 lg:items-start items-center">
+          <div class="flex items-center mb-4">
+            <svg class="w-6 sm:w-8 h-6 sm:h-8 text-blue-600 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+              <path fill-rule="evenodd" d="M7.5 5.25a3 3 0 0 1 3-3h3a3 3 0 0 1 3 3v.205c.933.085 1.857.197 2.774.334 1.454.218 2.476 1.483 2.476 2.917v3.033c0 1.211-.734 2.352-1.936 2.752A24.726 24.726 0 0 1 12 15.75c-2.73 0-5.357-.442-7.814-1.259-1.202-.4-1.936-1.541-1.936-2.752V8.706c0-1.434 1.022-2.7 2.476-2.917A48.814 48.814 0 0 1 7.5 5.455V5.25Zm7.5 0v.09a49.488 49.488 0 0 0-6 0v-.09a1.5 1.5 0 0 1 1.5-1.5h3a1.5 1.5 0 0 1 1.5 1.5Zm-3 8.25a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clip-rule="evenodd" />
+              <path d="M3 18.4v-2.796a4.3 4.3 0 0 0 .713.31A26.226 26.226 0 0 0 12 17.25c2.892 0 5.68-.468 8.287-1.335.252-.084.49-.189.713-.311V18.4c0 1.452-1.047 2.728-2.523 2.923-2.12.282-4.282.427-6.477.427a49.19 49.19 0 0 1-6.477-.427C4.047 21.128 3 19.852 3 18.4Z" />
+            </svg>
+            <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white">Expériences Professionnelles</h2>
+          </div>
+          <div class="flex-grow text-justify text-gray-700 dark:text-gray-300 overflow-y-auto max-h-[50vh] lg:max-h-[60vh] text-sm sm:text-base">
+            <p class="leading-relaxed mb-4">
+              Mon apprentissage a été largement autodidacte. Dès ma première année en classes préparatoires, j’ai maîtrisé <span class="font-semibold">HTML</span>, <span class="font-semibold">CSS</span>, <span class="font-semibold">PHP</span>, et <span class="font-semibold">JavaScript</span> en huit mois, réalisant des projets personnels. J’ai ensuite exploré des frameworks comme <span class="font-semibold">Bootstrap</span> et <span class="font-semibold">Tailwind CSS</span>.
+            </p>
+            <p class="leading-relaxed mb-4">
+              Ma formation en ingénierie m’a permis d’étudier <span class="font-semibold">C</span>, <span class="font-semibold">R</span>, <span class="font-semibold">MATLAB</span>, <span class="font-semibold">Python</span>, et <span class="font-semibold">LaTeX</span>. Lors de mes stages, j’ai travaillé sur un projet de <span class="font-semibold">développement web fullstack</span>, contribué à la gestion de <span class="font-semibold">bases de données agricoles</span> à la <span class="font-semibold">DDAEP</span>, et développé des <span class="font-semibold">méthodes de prédiction spatiale</span> dans un laboratoire de recherche.
+            </p>
+            <p class="leading-relaxed mb-4">
+              À la DDAEP, j’ai participé à l’analyse des tendances du marché agricole via une plateforme web et mobile. En laboratoire, j’ai implémenté des méthodes géostatistiques avec <span class="font-semibold">Python</span> et <span class="font-semibold">MATLAB</span>, renforçant mes compétences en analyse de données.
+            </p>
+            <div class="mt-6 flex justify-center lg:justify-start gap-4 items-center">
+              <button onclick="prev('2')" class="px-3 py-1.5 bg-blue-600 text-white rounded-lg hover:bg-blue-700 hover:scale-105 transition-all focus:outline-none focus:ring-2 focus:ring-blue-500 flex items-center gap-2 text-sm sm:text-base">
+                Précédent
+                <svg class="w-5 sm:w-6 h-5 sm:h-6 transform transition duration-300 hover:-translate-x-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                  <path fill-rule="evenodd" d="M7.28 7.72a.75.75 0 0 1 0 1.06l-2.47 2.47H21a.75.75 0 0 1 0 1.5H4.81l2.47 2.47a.75.75 0 1 1-1.06 1.06l-3.75-3.75a.75.75 0 0 1 0-1.06l3.75-3.75a.75.75 0 0 1 1.06 0Z" clip-rule="evenodd" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Progress Indicators -->
+    <div class="absolute bottom-4 flex gap-2">
+      <span class="w-3 h-3 rounded-full bg-gray-300"></span>
+      <span class="w-3 h-3 rounded-full bg-gray-300"></span>
+      <span class="w-3 h-3 rounded-full bg-blue-600"></span>
+    </div>
+  </section>
+</div>
 
 <script>
-  
-  function active(id){
-    //const section1 = document.getElementById(id);
-    //indice=parseInt(str, 10); // Conversion en entier en base 10
+  function goBack(id) {
+    const section = document.getElementById(id);
+    section.classList.add('hidden');
+  }
 
-    for (let i = 1; i < 4; i++) {
-        content=newContent+i ;
-        alert('ça marche')
-        if (content!=id) {
-            document.getElementById(content).classList.remove("hidden");
-        } 
-        else {
-            document.getElementById(content).classList.add("hidden");
-            document.getElementById(content)
-        }
+  function follow(id) {
+    const sections = ['newContent1', 'newContent2', 'newContent3'];
+    sections.forEach(sectionId => {
+      const section = document.getElementById(sectionId);
+      section.classList.toggle('hidden', sectionId !== 'newContent' + id);
+    });
+    window.scrollTo(0, 0);
+  }
 
-    }
-
-}
-
+  function prev(id) {
+    const sections = ['newContent1', 'newContent2', 'newContent3'];
+    sections.forEach(sectionId => {
+      const section = document.getElementById(sectionId);
+      section.classList.toggle('hidden', sectionId !== 'newContent' + id);
+    });
+    window.scrollTo(0, 0);
+  }
 </script>
 
 
@@ -789,6 +732,124 @@ Durant mes études, j’ai eu de nombreuses idées de projets web que j’ai com
 
 
 
+
+
+  <!-- Section Portfolio -->
+    <section id="portfolio" class="py-20 bg-gray-50 section-hidden">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Mes projets récents</h2>
+                <div class="w-20 h-1 bg-blue-500 mx-auto"></div>
+            </div>
+            
+            <!-- <div class="flex justify-center mb-12">
+                <div class="flex flex-wrap justify-center gap-4">
+                    <button class="px-4 py-2 bg-blue-500 text-white rounded-lg">Tous</button>
+                    <button class="px-4 py-2 bg-white text-gray-700 hover:bg-blue-500 hover:text-white rounded-lg transition">Web Design</button>
+                    <button class="px-4 py-2 bg-white text-gray-700 hover:bg-blue-500 hover:text-white rounded-lg transition">Développement</button>
+                    <button class="px-4 py-2 bg-white text-gray-700 hover:bg-blue-500 hover:text-white rounded-lg transition">Applications</button>
+                </div>
+            </div> -->
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Projet 1 -->
+                <div class="portfolio-item bg-white rounded-xl overflow-hidden shadow-sm">
+                    <div class="h-48 overflow-hidden">
+                        <img src="projets/dev_web.png" 
+                             alt="Projet 1" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Plateforme de formation dev web et Machine-Learning</h3>
+                        <p class="text-gray-500 mb-4">Une solution complète pour aider les nouveaux étudiants à vite s'intégrer dans la programmation informatique.</p>
+                        <a href="https://formationdevml.vercel.app/formation_web_ml_accueil.html" class="text-blue-500 font-medium flex items-center">
+                            Voir le projet <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Projet 2 -->
+                <div class="portfolio-item bg-white rounded-xl overflow-hidden shadow-sm">
+                    <div class="h-48 overflow-hidden">
+                        <img src="projets/Dr_Jamal.png" 
+                             alt="Projet 2" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Portfolio complet du phd Jamal ADETOLA</h3>
+                        <p class="text-gray-500 mb-4">Le professionnalisme demande une présence sur le net avec une Optimisation de la visibilité.</p>
+                        <a href="https://dr-jamal-portfolio.vercel.app/" class="text-blue-500 font-medium flex items-center">
+                            Voir le projet <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Projet 3 -->
+                <div class="portfolio-item bg-white rounded-xl overflow-hidden shadow-sm">
+                    <div class="h-48 overflow-hidden">
+                        <img src="projets/appel_video.png" 
+                             alt="Projet 3" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Plateforme de reunion en ligne avec sous-titre et traduction vocale</h3>
+                        <p class="text-gray-500 mb-4">Un projet en cours non achevé.</p>
+                        <a href="https://projets-gold.vercel.app/Appel_video.html" class="text-blue-500 font-medium flex items-center">
+                            Voir le projet <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Projet 4 -->
+                <div class="portfolio-item bg-white rounded-xl overflow-hidden shadow-sm">
+                    <div class="h-48 overflow-hidden">
+                        <img src="projets/assistantIA.png" 
+                             alt="Projet 4" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">interfaces de chatbot assistant sur toutes les qualités d'une personne ( Expérience ..... ) </h3>
+                        <p class="text-gray-500 mb-4">Site en cours de travail .</p>
+                        <a href="https://projets-gold.vercel.app/Assistant.html" class="text-blue-500 font-medium flex items-center">
+                            Voir le projet <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                
+                
+                <!-- Projet 5 -->
+                <div class="portfolio-item bg-white rounded-xl overflow-hidden shadow-sm">
+                    <div class="h-48 overflow-hidden">
+                        <img src="projets/projet_site.png" 
+                             alt="Projet 6" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">WYSIYYG ( CMS )</h3>
+                        <p class="text-gray-500 mb-4">Description du plan de création d'un CMS de crétion de site web avec possibilité d'exporter le code Tailwind.</p>
+                        <a href="https://projets-gold.vercel.app/Contenu_du%20site.html" class="text-blue-500 font-medium flex items-center">
+                            Voir le projet <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+
+
+                <!-- Projet 6 -->
+                <div class="portfolio-item bg-white rounded-xl overflow-hidden shadow-sm">
+                    <div class="h-48 overflow-hidden">
+                        <img src="projets/geneateImage.png" 
+                             alt="Projet 5" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Génération d'images avec plusieurs modéles de Hugginface</h3>
+                        <p class="text-gray-500 mb-4">Projet de génération d'image avec les modèle d'IA existant ou via les API des IA.</p>
+                        <a href="https://projets-gold.vercel.app/Generate.html" class="text-blue-500 font-medium flex items-center">
+                            Voir le projet <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
 
 
 
@@ -803,8 +864,6 @@ Durant mes études, j’ai eu de nombreuses idées de projets web que j’ai com
 <div class="justify-center">
   <p class="text-center font-bold text-2xl text-blue-500">Backend Compétences</p>
 </div>
-
-
 
 <div class="grid grid-cols-2 justify-items-center items-start gap-6 h-[250px] w-full px-4 py-10 sm:px-6 lg:px-8 lg:pt-8 mx-auto">
 
@@ -859,77 +918,61 @@ Durant mes études, j’ai eu de nombreuses idées de projets web que j’ai com
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <div class="grid grid-cols-2 justify-items-center items-start gap-6 h-[300px] w-full px-4 py-10 sm:px-6 lg:px-8 lg:pt-8 mx-auto">
 
 
 
-<!-- Icon Block -->
-<div class="text-left">
-  <div class="flex justify-center items-center size-12 bg-gray-50 border-gray-200 rounded-full mx-auto ">
-    <img alt="" class="rounded-full"  src="SVG\SQL.jfif" />
-  </div>
-  <div class="mt-3">
-    
-  <div class="dark:bg-inherit h-screen w-full flex justify-start items-start">
-    <fieldset class="text-xl max-w-md border-2 border-indigo-400 rounded-lg px-4 py-2">
-    <legend class="px-1 font-semibold text-center dark:text-gray-100">Database SQL</legend>
-    <div class="flex flex-col gap-2 text-base text-violet-800 dark:text-gray-200">
-      <a href="">MySQL</a>
-      <a href="">PostgreSQL</a>
-      <a href="">SQLite</a>
-      <a href="">Oracle</a>
-      <a href="">MongoDB</a>
-      <a href="">Firebase</a>
+    <!-- Icon Block -->
+    <div class="text-left">
+      <div class="flex justify-center items-center size-12 bg-gray-50 border-gray-200 rounded-full mx-auto ">
+        <img alt="" class="rounded-full"  src="SVG\SQL.jfif" />
+      </div>
+      <div class="mt-3">
+        
+      <div class="dark:bg-inherit h-screen w-full flex justify-start items-start">
+        <fieldset class="text-xl max-w-md border-2 border-indigo-400 rounded-lg px-4 py-2">
+        <legend class="px-1 font-semibold text-center dark:text-gray-100">Database SQL</legend>
+        <div class="flex flex-col gap-2 text-base text-violet-800 dark:text-gray-200">
+          <a href="">MySQL</a>
+          <a href="">PostgreSQL</a>
+          <a href="">SQLite</a>
+          <a href="">Oracle</a>
+          <a href="">MongoDB</a>
+          <a href="">Firebase</a>
+        </div>
+        </fieldset>
+        </div>
+        
+      </div>
+      </div>
+    <!-- End Icon Block -->
+
+
+
+
+
+    <!-- Icon Block -->
+    <div class="text-left">
+    <div class="flex justify-center items-center size-12 bg-gray-50 border-gray-200 rounded-full mx-auto ">
+      <img alt="" class="rounded-full"  src="SVG\cloud.jfif" />
     </div>
-    </fieldset>
+    <div class="mt-3">
+      
+    <div class="dark:bg-inherit h-screen w-full flex justify-start items-start">
+      <fieldset class="text-xl max-w-md border-2 border-indigo-400 rounded-lg px-4 py-2">
+      <legend class="px-1 font-semibold text-center dark:text-gray-100">Cloud Hosting</legend>
+      <div class="flex flex-col gap-2 text-base text-violet-800 dark:text-gray-200">
+        <a href="">Google Cloud Platform (GCP)</a>
+        <a href="">Render</a>
+        <a href="">Vercel</a>
+        <a href="">Docker</a>
+        <a href="">GitHub Pages</a>
+      </div>
+      </fieldset>
+      </div>
+
     </div>
-    
-  </div>
-  </div>
-<!-- End Icon Block -->
-
-
-
-
-
-<!-- Icon Block -->
-<div class="text-left">
-<div class="flex justify-center items-center size-12 bg-gray-50 border-gray-200 rounded-full mx-auto ">
-  <img alt="" class="rounded-full"  src="SVG\cloud.jfif" />
-</div>
-<div class="mt-3">
-  
-<div class="dark:bg-inherit h-screen w-full flex justify-start items-start">
-  <fieldset class="text-xl max-w-md border-2 border-indigo-400 rounded-lg px-4 py-2">
-  <legend class="px-1 font-semibold text-center dark:text-gray-100">Cloud Hosting</legend>
-  <div class="flex flex-col gap-2 text-base text-violet-800 dark:text-gray-200">
-    <a href="">Google Cloud Platform (GCP)</a>
-    <a href="">Render</a>
-    <a href="">Vercel</a>
-    <a href="">Docker</a>
-    <a href="">GitHub Pages</a>
-  </div>
-  </fieldset>
-  </div>
-
-</div>
-</div>
+    </div>
 
 
 </div>
@@ -1557,11 +1600,11 @@ Durant mes études, j’ai eu de nombreuses idées de projets web que j’ai com
           </div>
           <form novalidate="" class="flex flex-col py-6 space-y-6 md:py-0 md:px-6">
             <label class="block">
-              <span class="mb-1 text-blue-600">Full name</span>
+              <span class="mb-1 text-blue-600">Nom complet</span>
               <input type="text" placeholder="Christophe Wavoeke" class="mt-[6px] block w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:dark:ring-violet-600 dark:bg-gray-100">
             </label>
             <label class="block">
-              <span class="mb-1 text-blue-600">Email address</span>
+              <span class="mb-1 text-blue-600">Adresse mail</span>
               <input type="email" placeholder="exemple@gmail.com" class="mt-[6px] block w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:dark:ring-violet-600 dark:bg-gray-100">
             </label>
             <label class="block">
